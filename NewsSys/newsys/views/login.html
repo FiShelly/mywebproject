@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>新闻后台管理系统登录页</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+</head>
+<body>
+
+
+<!--start class login_frame div-->
+<div class=" col-xs-5  login_frame ">
+  <!--start class login_frame_head div-->
+  <div class="col-xs-12 login_frame_head ">
+    <h1>新闻后台管理系统</h1>
+      <div id="error_text" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span id="etc"></span>
+      </div>
+
+  </div>
+  <!--end class login_frame_head div-->
+
+  <!--start class form-horizontal form-->
+  <form class="form-horizontal" action="users/login" method="post">
+  <input type="hidden" name="_csrf" value=<%= csrf%>>
+    <div class="form-group ">
+      <label class="control-label col-xs-2" for="loginId">
+        <span class="glyphicon glyphicon-user" ></span>
+      </label>
+      <div class="col-xs-9">
+        <input type="text" class="form-control cancelBorder" name="loginId" id="loginId" required oninput="setCustomValidity('');"
+               oninvalid="setCustomValidity('请输入用户名')" placeholder="请输入用户名">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-2 control-label" for="password">
+        <span class="glyphicon glyphicon-lock" ></span>
+      </label>
+      <div class="col-xs-9">
+        <input type="password" class="form-control cancelBorder" name="password" id="password" required oninput="setCustomValidity('');"
+               oninvalid="setCustomValidity('请输入密码')" placeholder="请输入密码">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="checkbox col-xs-offset-2 col-xs-3">
+        <label>
+          <input type="checkbox" class=" cancelBorder">记住密码
+        </label>
+      </div>
+    </div>
+    <div class="imgbtn_style">
+      <input type="submit"  value="登录" class="sub_btn" id="sub_btn">
+    </div>
+  </form>
+  <!--end class form-horizontal form-->
+</div>
+<!--end class login_frame div-->
+<script type="text/javascript" src="/javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/javascripts/login.js"></script>
+</body>
+</html>

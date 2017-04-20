@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="work_action"  extends="json-default" namespace="/">
+	<action method="{1}" name="work_*" class="WorkAction">
+		<result name="teacher_update" >/teacher/teacher_update_work_iframe.jsp</result>
+		<result name="teacher_query" >/teacher/teacher_query_work_iframe.jsp</result>
+		<result name="dean_preReview" >/dean/dean_teacher_msg_iframe.jsp</result>
+		<result name="dean_review" >/dean/dean_review_work_iframe.jsp</result>
+		<result name="teacher_feebBack" >/teacher/teacher_feedback_work_iframe.jsp</result>
+		<result name="dean_copy" >/dean/dean_copy_work_iframe.jsp</result>
+		<result name="dean_query" >/dean/dean_query_work_iframe.jsp</result>
+		<result name="dean_dataCount" >/dean/dean_tablecount_work_iframe.jsp</result>
+		<result type="json">
+			<param name="root">result</param>
+		</result>
+	</action>
+</package>
+</struts>    

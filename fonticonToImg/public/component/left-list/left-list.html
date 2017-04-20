@@ -1,0 +1,17 @@
+<div class="left-list" id="leftList">
+    <div class="left-list-content-frame" >
+        <div class="left-list-content-body" style="transform: translateY(0px);">
+           <div ng-repeat="data in leftListData">
+               <div class="left-list-sp">{{data.iconType}}</div>
+               <div ng-repeat="detail in data.iconDetail  "  repeat-finish  class="left-list-item" ng-click="selectIcon(detail,data.iconType);">
+                   <i class="{{detail.allName}}"></i>
+                   <p ng-bind-html="detail.name"></p>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="left-list-scroll-thumb" ng-mousedown="jumpScroll($event);">
+        <div class="left-list-scroll-bar" style="transform: translateY(0px);"></div>
+    </div>
+</div>
+<div class="ic-amount-tips">在&nbsp;<span>{{allNum}}</span>&nbsp;个图标中找到&nbsp;<span>{{findNum}}</span>&nbsp;个</div>

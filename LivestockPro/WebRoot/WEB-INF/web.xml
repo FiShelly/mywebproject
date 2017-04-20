@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>LivestockPro</display-name>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  
+  	<filter>
+		<filter-name>adminlogin</filter-name>
+		<filter-class>
+			com.lspro.filter.AdminLoginFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>userlogin</filter-name>
+		<filter-class>
+			com.lspro.filter.UserLoginFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/model1_admin/*</url-pattern>
+	</filter-mapping> 
+	
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/model2_admin/*</url-pattern>
+	</filter-mapping> 
+
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/model3_admin/*</url-pattern>
+	</filter-mapping> 
+
+	<filter-mapping>
+		<filter-name>userlogin</filter-name>
+		<url-pattern>/model3_user/*</url-pattern>
+	</filter-mapping> 
+	
+	<filter-mapping>
+		<filter-name>userlogin</filter-name>
+		<url-pattern>/model1_user/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>userlogin</filter-name>
+		<url-pattern>/model4_user/*</url-pattern>
+	</filter-mapping> 
+    <jsp-config>
+    <taglib>
+      <taglib-uri>http:/LivestockSys/jstl/core</taglib-uri>
+      <taglib-location>/WEB-INF/c.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.InitServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FarmMesServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.FarmMesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProductRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.ProductRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FoodDrugUseRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.FoodDrugUseRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DisinfectionRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.DisinfectionRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ImmuneRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.ImmuneRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MedicalRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.MedicalRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EpidemicMonitoringServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.EpidemicMonitoringServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DisposalHarmlessServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.DisposalHarmlessServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DemoServlet</servlet-name>
+    <servlet-class>com.lspro.dao.impl.DemoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ImmuneProServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.ImmuneProServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SuppliesServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.SuppliesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnimalAServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.AnimalAServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnimalBServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.AnimalBServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProductAServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.ProductAServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProductBServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.ProductBServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EpidemicRecordServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.EpidemicRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GisMapServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.GisMapServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminManageServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.AdminManageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CountServlet</servlet-name>
+    <servlet-class>com.lspro.servlet.CountServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/InitServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FarmMesServlet</servlet-name>
+    <url-pattern>/FarmMesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductRecordServlet</servlet-name>
+    <url-pattern>/ProductRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FoodDrugUseRecordServlet</servlet-name>
+    <url-pattern>/FoodDrugUseRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DisinfectionRecordServlet</servlet-name>
+    <url-pattern>/DisinfectionRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImmuneRecordServlet</servlet-name>
+    <url-pattern>/ImmuneRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MedicalRecordServlet</servlet-name>
+    <url-pattern>/MedicalRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EpidemicMonitoringServlet</servlet-name>
+    <url-pattern>/EpidemicMonitoringServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DisposalHarmlessServlet</servlet-name>
+    <url-pattern>/DisposalHarmlessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DemoServlet</servlet-name>
+    <url-pattern>/modelOne1/DemoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImmuneProServlet</servlet-name>
+    <url-pattern>/ImmuneProServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SuppliesServlet</servlet-name>
+    <url-pattern>/SuppliesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnimalAServlet</servlet-name>
+    <url-pattern>/AnimalAServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnimalBServlet</servlet-name>
+    <url-pattern>/AnimalBServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductAServlet</servlet-name>
+    <url-pattern>/ProductAServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductBServlet</servlet-name>
+    <url-pattern>/ProductBServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EpidemicRecordServlet</servlet-name>
+    <url-pattern>/EpidemicRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GisMapServlet</servlet-name>
+    <url-pattern>/GisMapServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminManageServlet</servlet-name>
+    <url-pattern>/AdminManageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CountServlet</servlet-name>
+    <url-pattern>/CountServlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

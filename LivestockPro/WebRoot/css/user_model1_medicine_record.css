@@ -1,0 +1,185 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 100%;
+	height: 90%;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-right: 10px;
+	display: inline;
+	/*border:1px red solid;*/
+	/*overflow-y:auto;*/
+	/*scrollBar-face-color:#12A686;*//*设置滚动条的颜色*/
+	border-right-style:none;
+
+}
+.content_banner{
+	width:98%;
+	height: 30px;
+	text-align: left;
+	background-color: #12a686;
+	/*margin-top: 34px;*/
+	border:1px solid #00957C;
+
+}
+.content_banner font{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 35px;
+	line-height:35px ;
+	padding-left: 10px;
+}
+/*放置所有的表格的div*/
+.all_tables{
+	width: 100%;
+	height: 90%;
+	overflow-y:auto;
+	text-align: center;
+	/*margin: 0 auto;*/
+	/*margin-left: 233px;*/
+	/*margin-top:-244px;*/
+	/*border:1px red solid;*/
+	border-collapse: collapse;
+}
+#table1{
+	width: 700px;
+	height: 340px;
+	text-align: left;
+	background-color: white;
+	border:1px solid #484949;
+	border-bottom-style:none; 
+	font-family: "宋体";
+	font-size: 12px;
+	color:#484949;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	margin-bottom: 10px;
+}
+#table1 tr td{
+	height: 17px;
+	text-align: left;
+	border:1px solid #484949;
+	padding-left: 10px;
+	word-wrap:break-word;
+}
+#table1 input{
+	width: 170px;
+	height: 17px;
+	text-align: left;
+	vertical-align: top;
+	margin-left: -10px;
+	border:0px;
+}
+/*控制每个表格的标题*/
+#the_title{
+	font-family: 宋体;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color:black;
+}
+/*输入框中的表格*/
+#inner_table{
+	width:100%;
+	height:100%;
+	margin-left:-10px;
+	table-layout: fixed;
+}
+#inner_table tr td{
+	text-align: center;
+	
+}
+/*整个放置表格的内容*/
+.alter_content{
+	width: 98%;
+	height: 100%;
+	overflow-y:auto;
+	/*margin-bottom: 20px;*/
+	background-color: white;
+	border:1px solid #89d6c4;
+	/*border:1px red solid;*/
+}
+/*搜索框*/
+.search{
+	width: 98%;
+	height: 69px;
+	border:1px #a9d7cd solid;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	background-color: white;
+	font-family: 宋体;
+	font-size: 12px;
+	/*line-height: 69px;*/
+	/*border:1px red solid;*/
+}
+.content_table{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 100%;
+	/*width:100%;*/
+	
+}
+.content_table tr td{
+	height: 40px;
+}
+
+.content table{
+	width: 99.9%;
+	border-collapse: collapse;
+	height: auto;
+	table-layout: fixed;/*2015.5.11新增固定table宽度*/
+	/*margin-top:10px;*//*2015.5.11去掉上间距*/
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+	border:1px #a9d7cd solid;
+	overflow-y:scroll;
+}
+.content table tr td{
+	text-align: center;
+	width:100px;
+	height: 40px;
+}
+.content a{
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+}
+/*设置页码*/
+.yema{
+	width: 400px;
+	text-align: right;
+	float: right;
+	margin-right: 24px;
+	word-spacing: 2px;
+}
+.yema input{
+	width: 51px;
+	height: 22px;
+	color:white;
+	font-family: 宋体;
+	font-size: 12px;
+}
+#specialDiv{
+	float: right;
+	display: inline;
+	margin-right: 24px;
+	margin-top:25px;
+}
+#specialDiv img{
+	vertical-align: middle;
+}

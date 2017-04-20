@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>TeacherWorkSys</display-name>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/applicationContext.xml</param-value>
+	</context-param>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404Error.jsp</location>
+	</error-page> 
+ 
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/500Error.jsp</location>
+	</error-page>
+	
+	<filter>
+		<filter-name>login</filter-name>
+		<filter-class>com.teacherwork.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>/teacher/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>/dean/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>adminFilter</filter-name>
+		<filter-class>com.teacherwork.filter.AdminOpFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>adminFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>teacherFilter</filter-name>
+		<filter-class>com.teacherwork.filter.TeacherOpFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>teacherFilter</filter-name>
+		<url-pattern>/teacher/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>deanFilter</filter-name>
+		<filter-class>com.teacherwork.filter.DeanOpFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>deanFilter</filter-name>
+		<url-pattern>/dean/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>all_login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	>
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="jdbcUrl" value="jdbc:sqlserver://127.0.0.1:1433;Database = 学生情况"></property>
+		<property name="user" value="FiShelly."></property>
+		<property name="password" value="110210"></property>
+		<property name="maxPoolSize" value="40"></property>
+		<property name="minPoolSize" value="2"></property>
+		<property name="initialPoolSize" value="2"></property>
+		<property name="maxIdleTime" value="30"></property>
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.lspro.pojo.FarmMes</value>
+		    	<value>com.lspro.pojo.ProductionRecords</value>
+		    	<value>com.lspro.pojo.FoodDrugUseRecord</value>
+		    	<value>com.lspro.pojo.DisinfectionRecord</value>
+		    	<value>com.lspro.pojo.ImmuneRecord</value>
+		    	<value>com.lspro.pojo.EpidemicMonitoring</value>
+		    	<value>com.lspro.pojo.MedicalRecord</value>
+		    	<value>com.lspro.pojo.DisposalHarmless</value>
+		    	<value>com.lspro.pojo.Supplies</value>
+		    	<value>com.lspro.pojo.AnimalA</value>
+		    	<value>com.lspro.pojo.AnimalB</value>
+		    	<value>com.lspro.pojo.ProductA</value>
+		    	<value>com.lspro.pojo.ProductB</value>
+		    	<value>com.lspro.pojo.Users</value>
+		    	<value>com.lspro.pojo.AdminUsers</value>
+		    	<value>com.lspro.pojo.ImmunePro</value>	
+		    	<value>com.lspro.pojo.SuppliesItem</value>		
+				<value>com.lspro.pojo.EpidemicReport</value>
+				<value>com.lspro.pojo.SuppliesDispatch</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="nestedTransactionAllowed" value="true"></property>
+	</bean>
+
+	<tx:advice id="tx" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="check*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="cascadeDelete*" read-only="false" propagation="NESTED"  />
+			<tx:method name="*" read-only="false" propagation="REQUIRED"/>
+		</tx:attributes>	
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut expression="execution (* com.lspro.service.impl.*.*(..))" id="perform"/>
+		<aop:advisor advice-ref="tx" pointcut-ref="perform"/>
+	</aop:config>
+	
+	<bean id="adminUsersDao" class="com.lspro.dao.impl.AdminUsersDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="adminUsersService" class="com.lspro.service.impl.AdminUsersServiceImpl">
+		<property name="userDao" ref="adminUsersDao"></property>
+		<property name="dao" ref="adminUsersDao"></property>	
+	</bean>
+	
+	<bean id="animalADao" class="com.lspro.dao.impl.AnimalADAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="animalAService" class="com.lspro.service.impl.AnimalAServiceImpl">
+		<property name="adao" ref="animalADao"></property>
+		<property name="dao" ref="animalADao"></property>
+	</bean>
+	
+	<bean id="animalBDao" class="com.lspro.dao.impl.AnimalBDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="animalBService" class="com.lspro.service.impl.AnimalBServiceImpl">
+		<property name="dao" ref="animalBDao"></property>
+		<property name="bDao" ref="animalBDao"></property>
+	</bean>
+	
+	<bean id="disinfectionRecordDao" class="com.lspro.dao.impl.DisinfectionRecordDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="disinfectionRecordService" class="com.lspro.service.impl.DisinfectionRecordServiceImpl">
+		<property name="dao" ref="disinfectionRecordDao"></property>
+		<property name="disinDao" ref="disinfectionRecordDao"></property>
+	</bean>
+	
+	<bean id="disposalHarmlessDao" class="com.lspro.dao.impl.DisposalHarmlessDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="disposalHarmlessService" class="com.lspro.service.impl.DisposalHarmlessServiceImpl">
+		<property name="dao" ref="disposalHarmlessDao"></property>
+		<property name="dispoDao" ref="disposalHarmlessDao"></property>
+	</bean>
+	
+	<bean id="epidemicMonitoringDao" class="com.lspro.dao.impl.EpidemicMonitoringDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="epidemicMonitoringService" class="com.lspro.service.impl.EpidemicMonitoringServiceImpl">
+		<property name="dao" ref="epidemicMonitoringDao"></property>
+		<property name="ieDao" ref="epidemicMonitoringDao"></property>
+	</bean>
+	
+	<bean id="farmDao" class="com.lspro.dao.impl.FarmDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="farmService" class="com.lspro.service.impl.FarmServiceImpl">
+		<property name="dao" ref="farmDao"></property>
+		<property name="farmDao" ref="farmDao"></property>
+	</bean>
+	
+	<bean id="foodDrugUseRecordDao" class="com.lspro.dao.impl.FoodDrugUseRecordDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="foodDrugUseRecordService" class="com.lspro.service.impl.FoodDrugUseRecordServiceImpl">
+		<property name="dao" ref="foodDrugUseRecordDao"></property>
+		<property name="foodDao" ref="foodDrugUseRecordDao"></property>
+	</bean>	
+	
+	<bean id="immuneProgramDao" class="com.lspro.dao.impl.ImmuneProgramDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="immuneProgramService" class="com.lspro.service.impl.ImmuneProgramServiceImpl">
+		<property name="dao" ref="immuneProgramDao"></property>
+		<property name="immDao" ref="immuneProgramDao"></property>
+	</bean>	
+		
+	<bean id="immuneRecordDao" class="com.lspro.dao.impl.ImmuneRecordDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="immuneRecordService" class="com.lspro.service.impl.ImmuneRecordServiceImpl">
+		<property name="dao" ref="immuneRecordDao"></property>
+		<property name="immDao" ref="immuneRecordDao"></property>
+	</bean>	
+			
+	<bean id="medicalRecordDao" class="com.lspro.dao.impl.MedicalRecordDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="medicalRecordService" class="com.lspro.service.impl.MedicalRecordServiceImpl">
+		<property name="dao" ref="medicalRecordDao"></property>
+		<property name="imeDao" ref="medicalRecordDao"></property>
+	</bean>	
+			
+	<bean id="productADao" class="com.lspro.dao.impl.ProductADAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="productAService" class="com.lspro.service.impl.ProductAServiceImpl">
+		<property name="aDao" ref="productADao"></property>
+		<property name="dao" ref="productADao"></property>
+	</bean>	
+			
+	<bean id="productBDao" class="com.lspro.dao.impl.ProductBDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="productBService" class="com.lspro.service.impl.ProductBServiceImpl">
+		<property name="bDao" ref="productBDao"></property>
+		<property name="dao" ref="productBDao"></property>
+	</bean>	
+			
+	<bean id="productRecordDao" class="com.lspro.dao.impl.ProductRecordDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="productRecordService" class="com.lspro.service.impl.ProductRecordServiceImpl">
+		<property name="dao" ref="productRecordDao"></property>
+		<property name="proDao" ref="productRecordDao"></property>
+	</bean>	
+			
+	<bean id="suppliesDao" class="com.lspro.dao.impl.SuppliesDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="suppliesService" class="com.lspro.service.impl.SuppliesServiceImpl">
+		<property name="dao" ref="suppliesDao"></property>
+		<property name="supDao" ref="suppliesDao"></property>
+	</bean>	
+			
+	<bean id="usersDao" class="com.lspro.dao.impl.UsersDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="usersService" class="com.lspro.service.impl.UsersServiceImpl">
+		<property name="dao" ref="usersDao"></property>
+		<property name="userDao" ref="usersDao"></property>
+	</bean>	
+	
+	<bean id="epidemicReportDao" class="com.lspro.dao.impl.EpidemicReportDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="epidemicReportService" class="com.lspro.service.impl.EpidemicReportServiceImpl">
+		<property name="dao" ref="epidemicReportDao"></property>
+		<property name="epiDao" ref="epidemicReportDao"></property>
+	</bean>	
+	
+	<bean id="backMoreService" class="com.lspro.service.impl.BackMoreServiceImpl">
+		<property name="disinDao" ref="disinfectionRecordDao"></property>
+		<property name="dispoDao" ref="disposalHarmlessDao"></property>
+		<property name="epiDao" ref="epidemicMonitoringDao"></property>
+		<property name="foodDao" ref="foodDrugUseRecordDao"></property>
+		<property name="immunDao" ref="immuneRecordDao"></property>
+		<property name="medDao" ref="medicalRecordDao"></property>
+		<property name="proDao" ref="productRecordDao"></property>
+		<property name="immproDao" ref="immuneProgramDao"></property>
+		<property name="userDao" ref="usersDao"></property>
+		<property name="farmDao" ref="farmDao"></property>
+	</bean>
+</beans>

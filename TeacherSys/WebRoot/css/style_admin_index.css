@@ -1,0 +1,40 @@
+.loading_dialog_content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    top: 50%;
+    min-width: 200px;
+    width:auto;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -100px;
+    margin-left: -100px;
+    padding-left: 65px;
+    padding-right: 5px;
+    border: 2px solid #95B8E7;
+    color: #696969;
+}
+
+.gou_icon {
+    background: #fff url(../images/gou.jpg) no-repeat scroll 6px 4px;
+    background-size: 50px 50px;
+}
+
+.loading_icon {
+    background: #fff url(../images/loading.gif) no-repeat scroll 15px 10px;
+}
+.cha_icon{
+	background-image:url(../images/cha.png);
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:6px 4px;
+     background-size: 50px 50px;
+}
+.error_text{
+	display:none;
+	color:red;
+}
+.history_link{
+	margin-top: 0 !important;
+}

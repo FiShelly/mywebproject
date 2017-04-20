@@ -1,0 +1,117 @@
+/*表格样式*/
+.table_copy{
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 0.9em;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}
+.table_copy tr{
+    border-top: solid 1px black;
+}
+.table_copy td{
+    height: 30px;
+}
+.copy_row_1{
+    width: 4%;
+}
+.copy_row_2{
+    width: 18%;
+}
+.copy_row_3{
+    width: 27%;
+}
+.copy_row_4{
+    width: 7%;
+}
+.copy_row_5{
+    width: 7%;
+}
+.copy_row_6{
+    width: 5%;
+}
+.copy_row_7{
+    width: 7%;
+}
+.copy_row_8{
+    width: 7%;
+}
+.copy_row_9{
+    width: 7%;
+}
+.copy_row_10{
+    width: 7%;
+}
+.copy_row_11{
+    width: 4%;
+}
+/*查询框样式*/
+.tab_space_add {
+    display: block !important;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+.tab_space_add_title {
+    margin-top: 10px;
+}
+.tab_space_add_title>h1{
+	margin: 0;
+}
+.table_form {
+    height: 95%;
+}
+/*各种按钮样式*/
+.re_close_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px !important;
+    box-shadow: 1px 0px 8px gray;
+    /*cursor: pointer;*/
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+    float: right;
+    margin-top: -42px;
+}
+.cancel {
+    background-color: red;
+}
+.add {
+    background-color: #0079f5;
+}
+.same {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px !important;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+}
+thead>tr>th{
+            font-weight: 100;
+            height: 30px;
+        }
+.search_input{
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 5px;
+    text-align: left;
+    width: 90px;
+    border: 1px solid #ccc;
+    height: 20px;
+    line-height: 20px;
+}
+.searchType{
+    padding-left: 3px;
+    width: 55px;
+    border: none;
+    outline: none;
+}

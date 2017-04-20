@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<!-- 
+		一个session-factory代表一个数据库
+	 -->
+<session-factory>
+	<!-- 
+		链接数据库的用户名,密码，驱动，端口
+	-->
+	
+	<property name="connection.username">root</property>
+
+	<property name="connection.password">root</property>
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<property name="connection.url">
+		jdbc:mysql://localhost:3306/teacherwork
+	</property>
+	
+	<!-- 
+		方言
+		告诉hibernate用什么样的数据库
+	-->
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+	
+	<!-- 
+		validate 加载hibernate时，验证数据库的结构
+		update  加载hibernate时，检查数据库，如果表不存在，则创建，如果存在，则更新
+		create  每次加载hiberante,都会创建表
+		create-drop  每次加载hiberante,创建，卸载hiberante时，销毁
+	-->
+	<property name="hbm2ddl.auto">update</property>
+	<!-- 
+		显示sql语句
+	
+	<property name="show_sql">true</property>-->
+	<!-- 
+		格式化sql语句
+	
+	<property name="format_sql">true</property>-->
+	<!-- 
+		加载映射文件
+	-->
+	<mapping class="com.teacherwork.domain.Admin"/>
+	<mapping class="com.teacherwork.domain.BaseCoe"/>
+	<mapping class="com.teacherwork.domain.ClassIn"/>
+	<mapping class="com.teacherwork.domain.DataCount"/>
+	<mapping class="com.teacherwork.domain.Post"/>
+	<mapping class="com.teacherwork.domain.PreReview"/>
+	<mapping class="com.teacherwork.domain.SpecCoe"/>
+	<mapping class="com.teacherwork.domain.Title"/>
+	<mapping class="com.teacherwork.domain.Type"/>
+	<mapping class="com.teacherwork.domain.User"/>
+	<mapping class="com.teacherwork.domain.Work"/>
+	<mapping class="com.teacherwork.domain.YearMsg"/>
+	<mapping class="com.teacherwork.domain.YearTerm"/>
+	<mapping class="com.teacherwork.domain.Message"/>
+	
+</session-factory>
+</hibernate-configuration>

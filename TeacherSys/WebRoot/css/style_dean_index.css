@@ -1,0 +1,54 @@
+/*审核弹框样式*/
+.changepop_dialog{
+    width: 960px;
+    display: none;
+    height: 500px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: plum;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: -480px;
+    margin-top: -250px;
+    /*overflow: hidden;*/
+}
+#insert_work_dia{
+	width: 1100px !important;
+	margin-left: -550px !important;
+    margin-top: -250px !important;
+}
+.changepop_dialog iframe{
+    height: 560px;
+}
+
+.sal_man_dia_title{
+    line-height: 50px;
+    width: 400px;
+    height: 50px;
+}
+.sal_man_dia_content form{
+    height: 35px;
+}
+
+hr{
+    background-color: black;
+    height: 1px;
+}
+
+#history_unit_sal{
+    margin: 0px auto;
+    width: 300px;
+    height: 180px;
+    border-top: solid 1px black;
+}
+.history_unit_sal_row{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: solid 1px black;
+}
+.history_unit_sal_row span{
+    display: inline-block;
+    width: 80px;
+}

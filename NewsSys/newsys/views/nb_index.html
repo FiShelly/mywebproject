@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>新闻后台管理系统主页</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+</head>
+<body>
+    <div class="warpper">
+        <!--start id content_head div-->
+        <div id="content_head" class="navbar navbar-default navbar-static-top">
+            <div class="head_item_left" >
+                <h2>新闻后台管理系统</h2>
+            </div>
+            <div class="head_item_right hidden-xs">
+                <div class="headText">欢迎您！<strong id="userId"><%= loginId %></strong><br><a href="php/logout.php">【退出】</a></div>
+            </div>
+            <div class="head_item_setting hidden-xs">
+                <a class="menuIcon" id="controlSlide" >
+                    <i  class="glyphicon glyphicon-list"></i>
+                </a>
+            </div>
+        </div>
+        <!--end id content_head div-->
+
+        <!--start class main div-->
+        <div class=" main control_height_10">
+            <!--start class left div-->
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 leftMenu" id="leftMenu">
+
+                <!--start class menuList div-->
+                <div class="menuList">
+
+                    <!--start class mainMenu ul-->
+                    <ul class="mainMenu">
+                        <li id="pub_news" data-toggle="modal" data-target="#pub-news-modal">
+                            <div class="menuItem collapsed" data-toggle="collapse" data-target="#classCoeSetting">
+                            <span class="iconLiLeft ">
+                                <i class="glyphicon glyphicon-credit-card"></i>
+                            </span>
+                                <span class="text_item">发布新闻</span>
+                            </div>
+                        </li>
+                        <li id="regist" data-toggle="modal" data-target="#regist-account">
+                            <div class="menuItem  collapsed" data-toggle="collapse" data-target="#historyWorkQuery" >
+                            <span class="iconLiLeft ">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                                <span class="text_item">注册账号</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--end class mainMenu ul-->
+                </div>
+                <!--end class menuList div-->
+            </div>
+            <!--end class left div-->
+            <!--start class content div-->
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 content " id="content">
+                <!-- start id form-pub div-->
+                <div id="news-tab" >
+                    <h2>新闻管理</h2>
+                    <table class="table table-striped table-hover" >
+                        <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>摘要</th>
+                            <th>发布时间</th>
+                            <th>类别</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="news_tbody">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <nav>
+                                        <ul class="pagination">
+
+                                        </ul>
+                                    </nav>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- end id form-pub div-->
+                <div class="modal fade" id="pub-news-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" >发布新闻</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" id="news_form"  method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="new-title"  class="col-sm-3 control-label">新闻标题：</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="title" class="form-control" id="new-title" placeholder="新闻标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="new-sum" class="col-sm-3 control-label">新闻摘要：</label>
+                                        <div class="col-sm-9">
+                                            <textarea  name="summary" class="form-control" id="new-sum" placeholder="新闻摘要"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="upload-file"  class="col-sm-3 control-label">上传图片：</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" name="data" class="form-control" id="upload-file" accept="image/*">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="unew-sum" class="col-sm-3 control-label">图片：</label>
+                                        <div class="col-sm-9">
+                                            <img  id="adimg" class="form-control img-rounded" height="75">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="new-type" class="col-sm-3 control-label">类别：</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" id="new-type" name="type">
+                                                <option>推荐</option>
+                                                <option>百家</option>
+                                                <option>本地</option>
+                                                <option>图片</option>
+                                            </select>
+                                        </div>
+                                        <label for="new-state" class=" col-sm-3 control-label" >状态：</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" id="new-state" name="state">
+                                                <option>顶置</option>
+                                                <option>猜你喜欢</option>
+                                                <option>热点</option>
+                                                <option>焦点</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="add_news" class="btn btn-primary">发布</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="update-news-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" >修改新闻</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" id="unews_form"  method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="unew-title"  class="col-sm-3 control-label">新闻标题：</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="title" class="form-control" id="unew-title" placeholder="新闻标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="unew-sum" class="col-sm-3 control-label">新闻摘要：</label>
+                                        <div class="col-sm-9">
+                                            <textarea  name="summary" class="form-control" id="unew-sum" placeholder="新闻摘要"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="uupload-file"  class="col-sm-3 control-label">上传图片：</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" name="data" class="form-control" id="uupload-file" accept="image/*">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="unew-sum" class="col-sm-3 control-label">图片：</label>
+                                        <div class="col-sm-9">
+                                            <img src="" id="udimg" class="form-control img-rounded" height="75">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="unew-type" class="col-sm-3 control-label">类别：</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" id="unew-type" name="type">
+                                                <option>推荐</option>
+                                                <option>百家</option>
+                                                <option>本地</option>
+                                                <option>图片</option>
+                                            </select>
+                                        </div>
+                                        <label for="unew-state" class=" col-sm-3 control-label" >状态：</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" id="unew-state" name="state">
+                                                <option>顶置</option>
+                                                <option>猜你喜欢</option>
+                                                <option>热点</option>
+                                                <option>焦点</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="id" id="nid">
+                                    <input type="hidden" name="rphoto" id="rphoto">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="update_news" class="btn btn-primary">修改</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="regist-account" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" >账号注册</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" id="user_form">
+                                    <div class="form-group">
+                                        <label for="userName" class="col-sm-3 control-label">登录账号：</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="loginId" id="userName" placeholder="登录账号">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd" class="col-sm-3 control-label">登录密码：</label>
+                                        <div class="col-sm-9">
+                                            <input type="password"  class="form-control" name="password" id="pwd" placeholder="登录密码">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="registUser">注册</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="opfeedback" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class=" modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class=" alert-success modal-header " id="fb_header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <h4 class="modal-title" id="fbcontent" >添加成功</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--start class content div-->
+        </div>
+        <!--end class main div-->
+    </div>
+    <input id="csrfToken" type="hidden" name="_csrf" value=<%= csrf%>>
+</body>
+<script type="text/javascript" src="/javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+</html>

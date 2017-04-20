@@ -1,0 +1,22 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*显示目前所在位置*/
+.address{
+	width: 100%;
+	/*2015.6.9设置height和lineheight，去掉margintop*/
+	height: 30px;
+	position: absolute;
+	line-height: 30px;
+
+	/*margin-top: 10px;*/
+	margin-left: 15px;
+	/*border:1px red solid;*/
+}

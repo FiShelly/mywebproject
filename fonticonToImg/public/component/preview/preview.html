@@ -1,0 +1,10 @@
+<div class="ic-draw-win" draggable="true" >
+    <div class="ic-draw-title">预览</div>
+    <div class="ic-draw-layer">
+        <div class="ic-draw-layer-item" style="margin-bottom:23px;" ng-repeat="cf in configArray track by $index">
+            <p>状态{{$index+1}}</p>
+        </div>
+    </div>
+    <canvas class="ic-draw-cvs" ></canvas>
+</div>
+<div class="ic-current-tips">当前图标：</div>' + '<i class="ic-current {{curIcon.allName}}" id="ic-current"></i>

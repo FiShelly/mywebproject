@@ -1,0 +1,82 @@
+.table_msg {
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 0.9em;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}
+.same {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block ;
+}
+.delete {
+    background-color: red;
+}
+.table_msg tr {
+    height: 30px;
+    border-top: solid 1px black;
+}
+
+.msg_row_1 {
+    width: 14%;
+}
+
+.msg_row_2 {
+    width: 40%;
+}
+
+.msg_row_3 {
+    width: 18%;
+}
+
+.msg_row_4 {
+    width: 14%;
+}
+.msg_row_5 {
+    width: 14%;
+}
+
+h3 {
+    text-align: center;
+}
+.page{
+    text-align: right;
+}
+.page input{
+    display: inline-block;
+    padding: 3px;
+    outline: none;
+    border-style: none;
+    background-color: #0055ff;
+}
+.re_close_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px !important;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+    position: absolute;
+    /*float: right;*/
+    right: 5px;
+    margin-top: -15px;
+}
+.cancel{
+    background-color: red;
+}
+.add{
+    background-color: #0055ff;
+}

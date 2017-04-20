@@ -1,0 +1,134 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 100%;
+	height: 90%;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-right: 10px;
+	display: inline;
+	/*border:1px red solid;*/
+	/*overflow-y:auto;*/
+	/*scrollBar-face-color:#12A686;*//*设置滚动条的颜色*/
+	border-right-style:none;
+
+}
+.button{
+	float: right;
+	display: inline;
+	margin-top: -26px;
+	margin-right: 20px;
+}
+/*banner栏的按钮*/
+.button input{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	margin-right: 6px;
+	background-color: white;
+	border-radius: 2px;
+	border:0px;
+}
+.content_banner{
+	width:98%;
+	height: 30px;
+	text-align: left;
+	background-color: #12a686;
+	/*margin-top: 34px;*/
+	border:1px solid #00957C;
+
+}
+.content_banner span{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 35px;
+	line-height:35px ;
+	padding-left: 10px;
+}
+/*放置所有的表格的div*/
+.all_tables{
+	width: 79%;
+	height: 90%;
+	/*overflow-y:auto;*/
+	text-align: center;
+	margin: 0 auto;
+	/*margin-left: 233px;*/
+	/*margin-top:-244px;*/
+	/*border:1px red solid;*/
+	border-collapse: collapse;
+}
+#table1,#table2{
+	width: 700px;
+	height: 340px;
+	text-align: left;
+	background-color: white;
+	border:1px solid #484949;
+	border-bottom-style:none; 
+	border-collapse: collapse;
+	font-family: "宋体";
+	font-size: 12px;
+	color:#484949;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	margin-bottom: 10px;
+}
+#table1 tr td{
+	height: 17px;
+	text-align: left;
+	border:1px solid #484949;
+	padding-left: 10px;
+	word-wrap:break-word;
+}
+#table1 input{
+	width: 170px;
+	height: 17px;
+	text-align: left;
+	vertical-align: top;
+	margin-left: -10px;
+	border:0px;
+}
+/*控制每个表格的标题*/
+#the_title,#the_title2{
+	font-family: "宋体";
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color:black;
+}
+/*输入框中的表格*/
+#inner_table{
+	width:100%;
+	height:100%;
+	margin-left:-10px;
+	table-layout: fixed;
+	border-collapse:collapse;
+}
+#inner_table tr td{
+	text-align: center;
+	height:20px;
+}
+/*整个放置表格的内容*/
+.alter_content{
+	width: 98%;
+	height: 100%;
+	overflow-y:auto;
+	/*margin-bottom: 20px;*/
+	background-color: white;
+	border:1px solid #89d6c4;
+	/*border:1px red solid;*/
+}

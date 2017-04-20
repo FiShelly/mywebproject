@@ -1,0 +1,63 @@
+*{
+	margin:0;
+	padding:0;
+}
+.content{
+	width: 100%;
+	height: 99%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 0;
+	margin-left: 0;
+	overflow-y:scroll;
+}
+.content table{
+	border-collapse: collapse;
+}
+input{
+	width: 80px;
+	height: 20px;
+	border:1px solid #484949;
+	border-radius: 4px;
+}
+input:hover{
+	border:1px solid #A9D7CD;
+}
+.content table tr td{
+	text-align: center;
+	width: 100px;
+	height: 60px;
+	font-family: "宋体";
+	font-size: 14px;
+	color: black;
+	border:1px solid #A9D7CD;
+}
+td a{
+	font-family: "宋体";
+	font-size: 14px;
+	color:#484949;
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+	color: black;
+	font-family: "宋体";
+	font-size: 14px;
+}
+a:hover{
+	text-decoration: underline;
+	color: black;
+	font-family: "宋体";
+	font-size: 14px;
+}
+a:link{
+	text-decoration: none;
+	font-family: "黑体";
+	font-size: 14px;
+}
+
+th{
+   vertical-align: bottom;
+   border:1px solid #A9D7CD;
+}

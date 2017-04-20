@@ -1,0 +1,94 @@
+/*表格样式*/
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+td {
+    border: solid #000;
+    border-width: 1px;
+    text-align: center;
+}
+.table_count{
+    width: 100%;
+    height: auto;
+}
+tr{
+    height: 30px;
+}
+.td_0{
+    width: 7%;
+}
+.td_1{
+    width: 5%;
+}
+.td_2{
+    width: 12%;
+}
+/*查询框样式*/
+.tab_space_add {
+    display: block !important;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+.tab_space_add_title {
+    margin-top: 10px;
+}
+.page_btn_group_exp{
+    float: right;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: -55px;
+    background-color: #0079f5;
+}
+.query_box_form {
+	border-bottom:solid 1px #000;
+	border-top:solid 1px #000;
+	overflow:hidden;
+    line-height: 35px;
+    margin-bottom:10px;
+    text-align: left;
+}
+.radio_btn {
+    vertical-align: text-bottom;
+    width: 14px;
+    height: 14px;
+}
+
+/*分页按钮*/
+.pageDisplay_re{
+    width: 100px;
+    float: right;
+}
+.pageSelect_re {
+    display: inline-block;
+    line-height: 30px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+    width: 40px;
+}
+.page_btn_group_re{
+    float: right;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #0079f5;
+}
+.query_content{
+	margin-right:15px;
+	display: inline-block;
+	height: 35px;
+	float: left;
+}

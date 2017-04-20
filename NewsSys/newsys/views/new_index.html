@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <title>百度新闻</title>
+    <link href="/stylesheets/newindex.css" rel="stylesheet">
+</head>
+<body>
+    <!--start class container div-->
+    <div class="container">
+        <!--start header tag-->
+        <header>
+            <!--start class hd-top div-->
+            <div class="hd-top">
+                <div class="hd-top-1 hd-top-bg"></div>
+                <div class="hd-top-2 hd-top-bg"></div>
+                <div class="news-icon"></div>
+                <div class="hd-top-5 hd-top-bg"></div>
+                <div class="hd-top-4 hd-top-bg"></div>
+            </div>
+            <!--end class hd-top div-->
+
+            <!--start class hd-bottom div-->
+            <nav class="hd-bottom">
+                <ul class="nav-news">
+                    <li class="flag"><span class="click">推荐</span></li>
+                    <li class="flag"><span>百家</span></li>
+                    <li class="flag"><span>本地</span></li>
+                    <li class="flag"><span>图片</span></li>
+                    <li class="flag"><span>娱乐</span></li>
+                    <li class="flag"><span>社会</span></li>
+                    <li class="flag"><span>军事</span></li>
+                    <li class="flag"><span>科技</span></li>
+                    <li class="li-other flag"><span>互联网</span></li>
+                    <li class="flag"><span>女人</span></li>
+                    <li class="li-arrow" id="menuMore"><span>更多</span><div class="arrow-down"></div></li>
+                    <li class="flag"><span>生活</span></li>
+                    <li class="flag"><span>国际</span></li>
+                    <li class="flag"><span>国内</span></li>
+                    <li class="flag"><span>体育</span></li>
+                    <li class="flag"><span>汽车</span></li>
+                    <li class="flag"><span>财经</span></li>
+                    <li class="flag"><span>房产</span></li>
+                    <li class="flag"><span>时尚</span></li>
+                    <li class="flag"><span>教育</span></li>
+                    <li class="flag"><span>游戏</span></li>
+                    <li class="flag"><span>旅游</span></li>
+                    <li class="flag"><span>人文</span></li>
+                    <li class="li-other flag"><span>创意</span></li>
+                    <li class="li-other flag"><span>互联网+</span></li>
+                </ul>
+                <ul class="nav-news">
+                    <li><span>记者榜</span></li>
+                    <li><span>媒体榜</span></li>
+                    <li class="li-other"><span>删除及排序</span></li>
+                    <li class="li-arrow" id="menuShort"><span>收起</span><div class="arrow-down arrow-up"></div></li>
+                </ul>
+            </nav>
+            <!--end class hd-bottom div-->
+        </header>
+        <!--end header tag-->
+
+        <!--start article tag-->
+        <article>
+        </article>
+        <!--end article tag-->
+
+        <!--start class load-btn-wrapper div-->
+        <div class="load-btn-wrapper">
+            <div class="btn-refresh" data-page="1">
+                点击加载更多
+            </div>
+        </div>
+        <!--end class load-btn-wrapper div-->
+        <input type="hidden" id="csrfToken" name="_csrf" value=<%= csrf%>>
+    </div>
+    <!--end class container div-->
+</body>
+<script type="text/javascript" src="/javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/javascripts/initRem.js"></script>
+<script type="text/javascript" src="/javascripts/newsindex.js"></script>
+</html>

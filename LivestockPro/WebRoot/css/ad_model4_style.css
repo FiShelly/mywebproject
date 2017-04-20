@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    font-family: "微软雅黑";
+}
+
+#l-map {
+    height: 100%;
+    width:100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#result {
+    width: 260px;
+    height: 100%;
+    float: left;
+    position: absolute;
+    z-index: 5;
+    background-color: #F8FFF7;
+}
+input{
+ border: 1px solid #89d6c4;
+ border-radius:2px;
+ margin:5px 5px 5px 20px;
+ width:140px;
+ height: 25px;
+}
+table{
+    width: 100%;
+    border-collapse:collapse;
+    table-layout: fixed;
+    border: 1px #a9d7cd solid;
+}
+table{
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    font-size : 15px
+}
+
+tr:hover{
+    background-color:#F5F5F5; 
+    cursor: hand;
+}
+a{
+    text-decoration: none;
+}
+
+/*下面为物资变动的样式*/
+.treeContainer{ width:97%; margin-top: 10px;}
+.tree { margin-left:20px;width: 99%; }
+.content { margin:0; padding: 0;width: 99%;height: 100%;}
+.tree span { 
+  display:inline-block; height:24px; width:24px; margin-right:10px; 
+  border-radius:8px; vertical-align:middle;
+  background:url("../image/expand.png") no-repeat scroll left top 0; 
+}
+.tree span.collapse { 
+  background:url("../image/collapse.png") no-repeat scroll left top 0;
+}
+/*img { height:50px; }*/
+.tree label { font-family: "宋体";font-size: 16px;}
+
+/*选项卡的样式*/
+#myUL{
+    width: 240px;
+    height: 20px;
+    border: none;
+    margin: 0 0 0 20px;
+    border-collapse: collapse;
+    
+}
+#myUL tr td{
+    height: 100%;
+}
+#myUL li{
+    width: 120px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    border:1px solid #A3E7D4;
+    border-bottom-style: none;
+    
+}
+#content1,#content2{
+    border:1px solid #A3E7D4;
+    
+}

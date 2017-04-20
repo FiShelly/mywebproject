@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="dc_action"  extends="json-default" namespace="/">
+	<action method="{1}" name="dc_*" class="DataCountAction">
+		<result type="json">
+			<param name="root">result</param>
+		</result>
+	</action>
+</package>
+</struts>    

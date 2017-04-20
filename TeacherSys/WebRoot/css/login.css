@@ -1,0 +1,158 @@
+/*���ԭ�е�padding��margin�������ô�С*/
+* {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*˫����ɫ*/
+.bgblue {
+    height: 50%;
+    width: 100%;
+    background-color: #00aaff;
+}
+.bggray {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(237, 236, 236);
+}
+
+/*���õ�½����ʽ*/
+.login_frame {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 550px;
+    height: 350px;
+    box-shadow: 0px 0px 20px gray;
+    position: absolute;
+    background: white;
+}
+
+/*���õ�½��ͷ����ʽ�����⣬ͼƬ*/
+.login_frame_head {
+    margin-top: 5%;
+    font-family: arial, sans-serif;
+    text-align: center;
+    color: grey;
+    height: auto;
+}
+.icon_title {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    bottom: 0;
+    right: 0;
+}
+
+/*��½��������ʽ���������ʽ��*/
+.login_frame_content {
+    width: 65%;
+    height: 30%;
+    margin: 0px auto;
+}
+
+/*����input*/
+.input_type {
+    margin-top: 5%;
+    height: 45%;
+}
+
+/*��������ͼ��*/
+label img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/*ͼƬ��ť��ʽ���ύ��ť��*/
+.imgbtn_style {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    top: 100%;
+    left: 50%;
+    bottom: 0;
+    right: -30px;
+}
+.sub_btn {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 10px gray;
+    align-content: center;
+    border: none;
+    outline: none;
+    background-color: rgb(244, 67, 54);
+    cursor: pointer;
+}
+.sub_btn:hover {
+    background-color: rgb(244, 0, 0);
+}
+.sub_btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    line-height:60px;
+}
+
+/*����ǩ������ʽ*/
+.form_style {
+    outline: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: rgb(224, 224, 224);
+    transition: border-bottom-color 0.5s linear;
+    width: 90%;
+}
+.form_style:focus {
+    border-bottom-color: #0022ff;
+}
+select {
+    width: 100% !important;
+}
+
+.checkboxDiv{
+    float: left;
+    width: 50%;
+}
+.checklabel{
+    font-size: 14px;
+    vertical-align: middle;
+}
+.checkboxStyle{
+    width:14px;
+    height: 14px;
+    vertical-align: middle;
+}
+.forgetpw{
+    text-align: right;
+    float: left;
+    width: 50%;
+}
+.linkforget{
+    color: #00aaff;
+}
+a:link{
+    text-decoration: none;
+}
+.errortext{
+    margin-top: 5%;
+    margin-bottom: -6%;
+    height: 20%;
+}
+.errortext label{
+    display: none;
+    color: red;
+}

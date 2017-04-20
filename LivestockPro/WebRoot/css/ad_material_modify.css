@@ -1,0 +1,107 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 97%;
+	height: 100%;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-left: 10px;
+	display: inline;
+	/*overflow-y:auto;*/
+	/*scrollBar-face-color:#12A686;*//*设置滚动条的颜色*/
+	border-right-style:none;
+
+}
+/*显示目前所在位置*/
+.address{
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	margin-top: 10px;
+}
+.content_banner{
+	width:100%;
+	height: 30px;
+	text-align: left;
+	background-color: #12a686;
+	margin-top: 34px;
+	border:1px solid #00957C;
+
+}
+.content_banner font{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 35px;
+	line-height:35px ;
+	padding-left: 10px;
+}
+
+.button{
+	float: right;
+	display: inline;
+	margin-top: -26px;
+	margin-right: 20px;
+}
+/*banner栏的按钮*/
+.button input{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	margin-right: 6px;
+	background-color: white;
+	border-radius: 2px;
+	border:0px;
+}
+/*整个放置表格的内容*/
+.alter_content{
+	width: 100%;
+	height: 90%;
+	overflow-y:auto;
+	margin-bottom: 20px;
+	background-color: white;
+	border:1px solid #89d6c4;
+}
+#table_style{
+	width:600px;
+	height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	table-layout: fixed;
+	
+}
+#table_style tr td{
+	width: 200px;
+	/*border:1px solid #484949;*/
+	text-align: left;
+	font-family: 宋体;
+	font-size: 12px;
+	color:black;
+}
+#table_style tr td input{
+	height: 20px;
+	width: 99px;
+	border:1px solid #68D5BF;
+	border-radius: 2px;
+}
+
+#table_style select{
+	width: 60px;
+	height: 20px;
+	border:1px solid #68D5BF;
+	float: left;
+}

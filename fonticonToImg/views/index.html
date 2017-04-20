@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dm_try</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/tl.color.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/icon.main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-elico.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-entypo.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-typicons.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/font-linecons.css">
+
+</head>
+
+<body ng-app="dmTry" ng-controller="AppController">
+<!--all kind of component-->
+<headerbar ng-model="btns" cur-icon="curIcon"></headerbar>
+<left-list ng-model="leftListData" value="value" cur-icon="curIcon"></left-list>
+<searchbar ng-model="value" left-list-data="leftListData"></searchbar>
+<preview cur-icon="curIcon"></preview>
+<work-panel cur-icon="curIcon"></work-panel>
+<sprite-win></sprite-win>
+<!--cover -->
+<div class="bg-cover"></div>
+<div class="bg-cover new-cover" id="scroll-cover"></div>
+
+<script src="javascripts/angular.min.js"></script>
+<script src="component/header/header.js"></script>
+<script src="component/left-list/left-list.js"></script>
+<script src="component/search-bar/search-bar.js"></script>
+<script src="component/preview/preview.js"></script>
+<script src="component/work-panel/work-panel.js"></script>
+<script src="component/sprite-win/sprite-win.js"></script>
+<script src="service/config-service.js"></script>
+<script src="service/search-service.js"></script>
+<script src="service/canvas-service.js"></script>
+<script src="service/scroll-service.js"></script>
+<script src="javascripts/app.js"></script>
+</body>
+</html>

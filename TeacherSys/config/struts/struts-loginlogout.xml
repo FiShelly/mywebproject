@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="login_logout"  extends="json-default" namespace="/">
+	<action method="{1}" name="loginout_*" class="LoginoutAction">
+		<result name="index" type="redirect">/login.jsp</result>
+		<result name="teacher_index" type="redirect">teacher/teacher_index.jsp</result>
+		<result name="dean_index" type="redirect">dean/dean_index.jsp</result>
+		<result name="login_failed" >/all_login.jsp</result>
+		<result name="logout" type="redirect">/all_login.jsp</result>
+	</action>
+</package>
+</struts>    

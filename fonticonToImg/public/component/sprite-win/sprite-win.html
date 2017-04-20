@@ -1,0 +1,8 @@
+<div class="ic-sprite-win">
+    <div class="ic-sprite-title" data-node="dwTitle">Sprite</div>
+    <canvas class="ic-sprite-cvs" data-node="dwCvs" width="0" height="0"></canvas>
+    <div class="ic-sprite-ctrl" data-node="dwCtrl">
+        <div class="ic-sprite-ctrl-item" ng-repeat="cvs in canvasQueue"
+             style="width: {{cvs.canvas.width+'px'}}" ng-click="removeSprite($index);"><i class="icon-remove"></i></div>
+    </div>
+</div>

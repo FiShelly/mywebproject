@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="user_action"  extends="json-default" namespace="/">
+	<action method="{1}" name="user_*" class="UserAction">
+		<result name="index" type="redirect">admin/admin_index.jsp</result>
+		<result name="dean_list" >/admin/admin_dean_query_iframe.jsp</result>
+		<result name="teacher_list" >/admin/admin_teacher_query_iframe.jsp</result>
+		<result type="json">
+			<param name="root">result</param>
+		</result>
+	</action>
+</package>
+</struts>    

@@ -1,0 +1,240 @@
+/*重置所有元素margin，padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*设置html和body的高度为100%*/
+html {
+    height: 100%;
+    min-width: 250px;
+}
+
+body {
+    background-image: none !important;
+    height: 100%;
+}
+.warpper{
+    height: 100%;
+    overflow: hidden;
+}
+
+/*设置高度为100%*/
+.control_height_10 {
+    height: 100%;
+}
+
+/*左侧栏样式*/
+.leftMenu {
+    background-color: #00aaff;
+    padding: 0;
+    min-height: 100%;
+}
+
+/*右边主体内容样式*/
+.content {
+    overflow: scroll;
+    padding: 0;
+    height: 100%;
+}
+.headIcon{
+    text-align: center;
+}
+
+/*校徽图片样式*/
+.head_img {
+    width: 150px;
+    height: 150px;
+}
+
+/*校徽下方字体样式*/
+.head_title {
+    font-size: 22px;
+    display: inline-block;
+    font-family: STXinwei;
+    font-weight: 500;
+    width: 100%;
+    height: auto;
+}
+
+/*ul菜单样式*/
+.menuList {
+    width: 100%;
+}
+.mainMenu{
+    list-style: none;
+    margin: 0;
+}
+.menuItem {
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+}
+.mainMenu > li > div:hover {
+    background-color: #0055FF;
+}
+.childMenu > li:hover {
+    background-color: #0055FF;
+}
+
+/*头部菜单栏左右侧图标*/
+.head_item_left {
+    position: relative;
+    float: left;
+}
+
+/*重置a标签样式*/
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:link{
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
+/*字体图标样式*/
+.menuIcon {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+/*右边主题内容的导航栏样式*/
+.navbar-static-top {
+    background-color: #ededef;
+}
+
+#content_head {
+    height: 75px;
+    line-height: 75px;
+    margin: 2px;
+}
+
+/*导航栏右侧个信息样式*/
+.head_item_right {
+    display: inline-block;
+    float: right;
+    height: 75px;
+}
+
+.head_item_right img {
+    width: 50px;
+    height: 50px;
+}
+
+.headViewIcon {
+    float: left;
+    width: 50px;
+    height: 75px;
+}
+
+/*导航栏欢迎文字样式*/
+.headText {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    line-height: 25px;
+    margin-top: 12px;
+}
+
+.head_item_setting {
+    float: right;
+    height: 75px;
+    margin-right: 18px;
+}
+
+/*消息提醒数目图标样式*/
+.messageStyle {
+    position: absolute;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    top: 28%;
+    margin-left: -10px;
+}
+
+.moveToSpan {
+    position: absolute;
+    border-radius: 16px;
+    top: -7px;
+    left: 14px;
+}
+
+.head_img {
+    display: inline-block;
+}
+/*子菜单样式*/
+.childMenu > li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.childMenuIcon {
+    margin-right: 20px;
+}
+
+/*菜单栏题目左右侧图标*/
+.iconLiLeft {
+    width: 30px;
+    padding-right: 15px;
+    margin-right: 10px;
+    border-right: 1px solid #0055ff;
+}
+.pull-right {
+    margin-right: 10px;
+}
+.pub-title{
+    text-align: center;
+}
+textarea{
+    resize: none;
+    height: 79px !important;
+}
+@media (max-width: 767px){
+    #leftMenu {
+        min-height: 40px;
+    }
+    .mainMenu li{
+        width: 50%;
+        border-right: 1px solid #0055ff;
+        float: left;
+    }
+}
+#news-tab{
+    /*display: none;*/
+    margin: 0 auto;
+    width: 95%;
+}
+table th,td{
+    text-align: center;
+}
+.op-btnd{
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.op-btnu{
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#udimg,#adimg{
+    height: 200px;
+}

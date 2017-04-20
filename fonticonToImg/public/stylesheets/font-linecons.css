@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'linecons';
+  src: url("../font/linecons.eot");
+  src: url("../font/linecons.eot?#iefix") format('embedded-opentype'), url("../font/linecons.woff") format('woff'), url("../font/linecons.ttf") format('truetype'), url("../font/linecons.svg#entypo") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="linecons-icon-"],
+[class*=" linecons-icon-"] {
+  font-family: 'linecons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+.linecons-icon-heart:before {
+	content: "\e000";
+}
+.linecons-icon-cloud:before {
+	content: "\e001";
+}
+.linecons-icon-star:before {
+	content: "\e002";
+}
+.linecons-icon-tv:before {
+	content: "\e003";
+}
+.linecons-icon-sound:before {
+	content: "\e004";
+}
+.linecons-icon-video:before {
+	content: "\e005";
+}
+.linecons-icon-trash:before {
+	content: "\e006";
+}
+.linecons-icon-user:before {
+	content: "\e007";
+}
+.linecons-icon-key:before {
+	content: "\e008";
+}
+.linecons-icon-search:before {
+	content: "\e009";
+}
+.linecons-icon-settings:before {
+	content: "\e00a";
+}
+.linecons-icon-camera:before {
+	content: "\e00b";
+}
+.linecons-icon-tag:before {
+	content: "\e00c";
+}
+.linecons-icon-lock:before {
+	content: "\e00d";
+}
+.linecons-icon-bulb:before {
+	content: "\e00e";
+}
+.linecons-icon-pen:before {
+	content: "\e00f";
+}
+.linecons-icon-diamond:before {
+	content: "\e010";
+}
+.linecons-icon-display:before {
+	content: "\e011";
+}
+.linecons-icon-location:before {
+	content: "\e012";
+}
+.linecons-icon-eye:before {
+	content: "\e013";
+}
+.linecons-icon-bubble:before {
+	content: "\e014";
+}
+.linecons-icon-stack:before {
+	content: "\e015";
+}
+.linecons-icon-cup:before {
+	content: "\e016";
+}
+.linecons-icon-phone:before {
+	content: "\e017";
+}
+.linecons-icon-news:before {
+	content: "\e018";
+}
+.linecons-icon-mail:before {
+	content: "\e019";
+}
+.linecons-icon-like:before {
+	content: "\e01a";
+}
+.linecons-icon-photo:before {
+	content: "\e01b";
+}
+.linecons-icon-note:before {
+	content: "\e01c";
+}
+.linecons-icon-clock:before {
+	content: "\e01d";
+}
+.linecons-icon-paperplane:before {
+	content: "\e01e";
+}
+.linecons-icon-params:before {
+	content: "\e01f";
+}
+.linecons-icon-banknote:before {
+	content: "\e020";
+}
+.linecons-icon-data:before {
+	content: "\e021";
+}
+.linecons-icon-music:before {
+	content: "\e022";
+}
+.linecons-icon-megaphone:before {
+	content: "\e023";
+}
+.linecons-icon-study:before {
+	content: "\e024";
+}
+.linecons-icon-lab:before {
+	content: "\e025";
+}
+.linecons-icon-food:before {
+	content: "\e026";
+}
+.linecons-icon-t-shirt:before {
+	content: "\e027";
+}
+.linecons-icon-fire:before {
+	content: "\e028";
+}
+.linecons-icon-clip:before {
+	content: "\e029";
+}
+.linecons-icon-shop:before {
+	content: "\e02a";
+}
+.linecons-icon-calendar:before {
+	content: "\e02b";
+}
+.linecons-icon-vallet:before {
+	content: "\e02c";
+}
+.linecons-icon-vynil:before {
+	content: "\e02d";
+}
+.linecons-icon-truck:before {
+	content: "\e02e";
+}
+.linecons-icon-world:before {
+	content: "\e02f";
+}

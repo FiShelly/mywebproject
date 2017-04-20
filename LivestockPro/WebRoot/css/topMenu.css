@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width:100%;
+	height: 100%;
+}
+.banner{
+	width:100%;
+	height: 60px;
+	display:block;
+	position:fixed;
+	background-color:#12a686;
+}
+.top_menu{
+	width: 100%;
+	height: 100%;
+}
+.top_menu table{
+	text-align:center;
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+	border-collapse:collapse;
+}
+.top_menu table tr td{
+	width: 50px;
+	height: 72px;
+	min-width: 50px;
+	padding-top: 0px;
+	text-align: center;
+	vertical-align: center;
+}
+.top_menu table tr td img{
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.top_menu table tr td p{
+	font-family: 宋体;
+	font-size: 12px;
+	color: white;
+	white-space: nowrap;
+}
+.top_menu table a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+a:hover{
+	background-color: #013334;
+	color: white;
+}
+a:active{
+	background-color: #013334;
+	color:white;
+}

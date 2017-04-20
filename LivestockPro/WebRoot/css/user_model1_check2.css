@@ -1,0 +1,171 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 98%;
+	height: 98%;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-left: 0px;
+	
+	border:1px solid #00957C;
+	
+	/*border:1px red solid;*/
+}
+.content_banner{
+	width:99.8%;
+	height: 30px;
+	text-align: left;
+	background-color: #12a686;
+	/*margin-top: 34px;*/
+	border:1px solid #00957C;
+}
+.content_banner font{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 25px;
+	line-height:25px ;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+
+
+/*搜索框*/
+.search{
+	width: 100%;
+	height: 56px;
+	border:1px #a9d7cd solid;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.search div{
+	font-family: 宋体;
+	font-size: 12px;
+	color: black;
+	display: inline;
+	float: left;
+	/*margin-right: 10px;*/
+	/*padding-top: 20px;*/
+}
+.search input{
+	width:100px;
+	height: 20px;
+	border-radius: 2px;
+	border:1px solid #89d6c4;
+}
+
+a:link{
+	text-decoration: none;
+	font-size:14px;
+	font-family:黑体;
+	color:black;
+}
+a:hover{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+a:visited{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+.content table{
+	width: 100%;
+	border-collapse: collapse;
+	height: auto;
+	table-layout: fixed;/*2015.5.11新增固定table宽度*/
+	/*margin-top:10px;*//*2015.5.11去掉上间距*/
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+	/*border:1px #a9d7cd solid;*/
+	overflow-y:scroll;
+}
+.content table tr td{
+	text-align: left;
+	width:100px;
+	height: 40px;
+}
+.content a{
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+}
+#specialDiv{
+	float: right;
+	display: inline;
+	margin-right: 24px;
+	margin-top:15px;
+}
+#specialDiv img{
+	vertical-align: middle;
+}
+.content_table{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 90%;
+	width: 100%;
+	overflow-y:auto;
+	/*margin-left:10px;*/
+	/*border:1px blue solid;*/
+}
+.content_table input{
+	width:99%;
+	height: 95%;
+	border:1px solid #aaaaaa;
+}
+.content_table textarea{
+	width:99%;
+	height: 95%;
+	border:1px solid #aaaaaa;
+}
+/*设置页码*/
+.yema{
+	width: 300px;
+	text-align: right;
+	float: right;
+	margin-right: 24px;
+	word-spacing: 2px;
+	/*border:1px red solid;*/
+}
+.yema input{
+	width: 51px;
+	height: 22px;
+	color:white;
+	font-family: 宋体;
+	font-size: 12px;
+}
+.button{
+	float: right;
+	display: inline;
+	margin-top: -26px;
+	/*margin-right: -2px;*/
+}
+/*banner栏的按钮*/
+.button input{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	margin-right: 6px;
+	background-color: white;
+	border-radius: 2px;
+	border:0px;
+}

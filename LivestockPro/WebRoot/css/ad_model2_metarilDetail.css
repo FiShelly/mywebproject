@@ -1,0 +1,77 @@
+#contentTable{
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align:center;
+    width:99%;
+    border: 1px solid #A9D7CD;
+}
+#contentTable tr td{
+
+    text-align: center;
+    font-family: 宋体;
+    font-size: 12px;
+    color:black;
+    border: 0;
+    /*width: 80px;*/
+    /*opacity: 0.85;*/
+    height: 25px;
+}
+
+#contentTable a:link{
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 宋体;
+    color: black;
+}
+#contentTable a:hover{
+    text-decoration: underline;
+    font-size: 12px;
+    font-family: 宋体;
+    color: black;
+}
+#contentTable a:visited{
+    font-size: 12px;
+    font-family: 宋体;
+    color: black;
+}
+#searchTable{
+    width: 99%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align:center;
+    border: 1px solid #A9D7CD;
+    margin: 10px 0 10px 0;
+}
+#searchTable tr td{
+    width: 50px;
+    height: 40px;
+    border: 0;
+    font-family: 宋体;
+    font-size: 12px;
+    color:black;
+    text-align: center;
+    vertical-align: middle;
+}
+input{
+    width: 99%;
+    border: 1px solid #A9D7CD;
+}
+#content{
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+}
+.yema{
+    width: 300px;
+    text-align: right;
+    float: right;
+    margin-right: 14px;
+    word-spacing: 2px;
+}
+.yema input{
+    width: 51px;
+    height: 22px;
+    color: white;
+    font-family: 宋体;
+    font-size: 12px;
+}

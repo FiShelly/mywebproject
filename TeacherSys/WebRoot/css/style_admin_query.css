@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*瀵煎叆鐭㈤噺鍥炬爣搴�/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../css/iconfont.eot'); /* IE9*/
+    src: url('../css/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../css/iconfont.woff') format('woff'), /* chrome銆乫irefox */ url('../css/iconfont.ttf') format('truetype'), /* chrome銆乫irefox銆乷pera銆丼afari, Android, iOS 4.2+*/ url('../css/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 970px) {
+    .fixTabWidth {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    .fixTabWidth {
+        width: 100%;
+    }
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.table_msg {
+    border-collapse: collapse;
+    height: auto;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 0.9em;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}
+
+.table_msg tr {
+    height: 40px;
+    border-top: solid 1px black;
+}
+
+.table_msg input[type=text] {
+    width: 90%;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    outline: none;
+}
+
+.table_msg select {
+    padding-left: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    outline: none;
+    width: 80%;
+}
+
+.table_msg input[type=radio] {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
+
+.same {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px !important;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+}
+
+.btn_group {
+    display: inline-block;
+    border-radius: 15px;
+    width: 70px;
+    height: 30px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 1px 0px 8px gray;
+}
+.page select{
+    width: 40px;
+}
+.page{
+    float: right;
+    margin-top: 4px;
+}
+
+.page input{
+	cursor:pointer;
+    display: inline-block;
+    padding: 3px;
+    outline: none;
+    border-style: none;
+    background-color: #00aaff;
+}
+.add {
+    background-color: #0079f5;
+}
+.delete {
+    background-color: red;
+}

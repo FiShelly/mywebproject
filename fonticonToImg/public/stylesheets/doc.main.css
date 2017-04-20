@@ -1,0 +1,66 @@
+.list{
+    position:fixed;
+    z-index:1000;
+    top:40px;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    overflow:hidden;
+}
+.list-content-frame{
+    position:absolute;
+    top:8px;
+    bottom:8px;
+    left:48px;
+    right:48px;
+    overflow:hidden;
+}
+.list-content-body{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:auto;
+    min-height:1px;
+}
+.list-scroll-thumb{
+    position:absolute;
+    top:8px;
+    bottom:8px;
+    right:8px;
+    width:40px;
+    overflow:hidden;
+}
+.list-scroll-bar{
+    position:absolute;
+    top:0;
+    left:10px;
+    width:20px;
+    height:1px;
+    margin:8px 0;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:
+        0 0 2px rgba(0, 0, 0, 0.3),
+        0 0 8px rgba(0, 0, 0, 0.1);
+}
+.list-item{
+    width:800px;
+    height:250px;
+    box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+    clear:both;
+    margin:8px auto;
+    overflow:hidden;
+    -webkit-animation:folding ease-in-out 1s;
+}
+
+@-webkit-keyframes folding{
+    0%{
+        -webkit-transform:rotateX(90deg) translateY(-50%) perspective(17px) skew(5deg, 5deg);
+    }
+    
+    100%{
+        -webkit-transform:rotateX(0) translateY(0) perspective(0) skew(0, 0);
+    }
+}

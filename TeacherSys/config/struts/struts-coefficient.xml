@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.configuration.xml.reload" value="true"></constant>
+<package name="coefficient_action"  extends="json-default" namespace="/">
+	<action method="{1}" name="coe_*" class="CoefficientAction">
+		<result type="json">
+			<param name="root">result</param>
+		</result>
+		<result name="dean_udq_coe" >/dean/dean_insert_coefficient_iframe.jsp</result>
+		<result name="dean_query_coe" >/dean/dean_query_coefficient_iframe.jsp</result>
+	</action>
+</package>
+</struts>    

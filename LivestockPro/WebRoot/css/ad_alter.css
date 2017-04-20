@@ -1,0 +1,194 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 97%;
+	height: 90%;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-left: 20px;
+	display: inline;
+
+}
+/*显示目前所在位置*/
+.address{
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	margin-top: 10px;
+}
+.content_banner{
+	width:99.88%;
+	height: 35px;
+	text-align: left;
+	background-color: #12a686;
+	margin-top: 34px;
+	border:1px solid #00957C;
+}
+.content_banner font{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 35px;
+	line-height:35px ;
+	padding-left: 10px;
+}
+
+a:link{
+	text-decoration: none;
+	font-size:14px;
+	font-family:黑体;
+	color:black;
+}
+a:hover{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+a:visited{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+.button{
+	float: right;
+	display: inline;
+	margin-top: -30px;
+	margin-right: 20px;
+}
+.button input{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	margin-right: 6px;
+	background-color: white;
+	border-radius: 2px;
+	border:0px;
+}
+
+.button a{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	background-color: white;
+	border-radius: 2px;
+	text-decoration: none;
+}
+.alter_content{
+	width: 99.89%;
+	height: 98%;
+	overflow-y: auto;
+	/*scrollBar-face-color:#12A686;*/
+	margin-bottom: 20px;
+	/*background-color: #ebebeb;*/
+	border:1px solid #89d6c4;
+}
+/*设置放置内容的div*/
+#content_div{
+	background-color:white;
+	width:100%;
+	height:auto;
+	text-align:left;
+	padding-bottom:1px;
+}
+/*所有表格*/
+#table1{
+	width: auto;
+	height: 340px;
+	text-align: center;
+	background-color: white;
+	font-family: 宋体;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	color:#484949;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+#table1 tr td{
+	height: 17px;
+	width:170px;
+	text-align: left;
+	border:1px solid #484949;
+	padding-left: 10px;
+	word-wrap:break-word;
+	
+}
+#table1 input{
+	width: 100%;
+	height: 17px;
+	text-align: left;
+	vertical-align: top;
+	margin-left: -10px;
+	border:0px;
+}
+/*间隙*/
+.the_border{
+	width: 100%;
+	height: 20px;
+	margin-top: -13px;
+	background-color: #ebebeb;
+}
+/*控制每个表格的标题*/
+#the_title{
+	font-family: 宋体;
+	font-size: 12px;
+	color:black;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	white-space: nowrap;
+}
+#table2{
+	width: 700px;
+	height: auto;
+	border-collapse:collapse;
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-family: 宋体;
+	font-size: 12px;
+	color:#484949;
+	border:1px solid #484949;
+	table-layout: fixed;
+	
+}
+#table2 tr td{
+	height: 20px;
+	border:1px solid #484949;
+	text-align: center;
+	word-wrap:break-word;
+}
+/*输入框中的表格*/
+#inner_table{
+	width:100%;
+	height:auto;
+	table-layout: fixed;
+	
+}
+
+#inner_table tr td{
+	height: 17px;
+	border:1px solid #484949;
+	text-align: center;
+	
+}

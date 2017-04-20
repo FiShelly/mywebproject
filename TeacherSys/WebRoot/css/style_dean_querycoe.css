@@ -1,0 +1,55 @@
+.query_base_coef_table{
+    width: 23%;
+}
+.query_type_coef_table{
+    width: 23%;
+}
+.query_type_coef_table input{
+    width: 90% !important;
+}
+@media screen and (max-width: 960px) {
+    .query_base_coef_table span:nth-child(1){
+        width: 55px;
+    }
+    .query_base_coef_table span:nth-child(2){
+        width: 105px;
+    }
+    .query_base_coef_table span:nth-child(3){
+        width: 65px;
+    }
+    .query_type_coef_table span:nth-child(1){
+        width: 145px;
+    }
+    .query_type_coef_table span:nth-child(2){
+        width: 75px;
+    }
+}
+@media screen and (min-width: 960px) {
+
+    .query_base_coef_table span:nth-child(1) {
+        width: 25%;
+    }
+
+    .query_base_coef_table span:nth-child(2) {
+        width: 45%;
+    }
+
+    .query_base_coef_table span:nth-child(3) {
+        width: 30%;
+    }
+
+    .query_type_coef_table span:nth-child(1) {
+        width: 70%;
+    }
+
+    .query_type_coef_table span:nth-child(2) {
+        width: 30%;
+    }
+}
+#tab_select{
+    margin-left: 10px;
+}
+#tab_select select{
+    width: 60px;
+    height: 30px;
+}

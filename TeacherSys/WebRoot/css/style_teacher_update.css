@@ -1,0 +1,66 @@
+/*工作量修改div行样式*/
+.workRowChange{
+    border-top: solid 1px black;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom : 20px;
+    border-bottom:solid 1px black;
+}
+/*工作量修改div字体边框样式*/
+.workRowTextA {
+    text-align: left;
+    border-bottom-style: none;
+}
+/*分页按钮字体排列*/
+.page_group{
+    text-align: right;
+}
+.page_btn_group{
+    display: inline-block;
+    width: 45px ;
+    height: 23px;
+    background-color: #0079f5;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 1px 0px 8px gray;
+}
+.page_btn_group *{
+    font-size: 12px;
+}
+.page_group{
+    text-align: right;
+}
+.pageDisplay{
+    display: inline-block;
+    line-height: 35px;
+    width: 200px;
+}
+.pageSelect{
+    padding: 0px;
+    height: 30px;
+    width: 50px;
+}
+/*修改全部提交按钮*/
+.changeSubBtnPos{
+    float: left;
+    margin-top:2px;
+}
+.page select{
+    width: 40px;
+}
+.page{
+    float: right;
+}
+
+.page input{
+	width:50px;
+	cursor:pointer;
+    display: inline-block;
+    padding: 3px;
+    outline: none;
+    border-style: none;
+    font-size:14px;
+    background-color: #00aaff;
+}

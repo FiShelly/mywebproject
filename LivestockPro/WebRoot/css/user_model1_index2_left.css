@@ -1,0 +1,45 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+
+/*导航栏div*/
+.theUL{
+	width: 200px;
+	height: 218px;
+	margin-left: 10px;
+	/*margin-top: 34px;*/
+
+}
+/*表格导航*/
+.menu{
+	width: 200px;/*2015.5.16*/
+	height: 230px;
+	position: fixed;
+	/*margin-top: -24px;*/
+	background:url(../image/ad_background.png) no-repeat;
+	border-collapse: collapse;
+	/*border:1px solid red;*/
+}
+.menu tr td{
+	height: 30px;
+	text-align: left;
+	font-family: 微软雅黑;
+	font-size: 12px;
+}
+.menu tr td a{
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#484949;
+	text-decoration: none;
+}
+.menu tr td a img{
+	vertical-align: middle;
+	margin-left: 1px;
+}

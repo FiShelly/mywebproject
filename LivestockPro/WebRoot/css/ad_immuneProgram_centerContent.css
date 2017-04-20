@@ -1,0 +1,238 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #f8fff7;
+}
+/*整个内容框*/
+.content{
+	width: 98%;
+	height: 100%;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	margin-top: 0px;
+	margin-left: 0px;
+	
+	/*border:1px yellow solid;*/
+}
+/*整个放置表格的内容*/
+/*.alter_content{
+	width: 100%;
+	height: auto;
+	overflow-y:auto;
+	margin-bottom: 20px;
+	background-color: white;
+	margin-top: 10px;
+	border:1px solid #A9D7CD;
+}*/
+
+.content_banner{
+	width:100%;
+	height: 30px;
+	text-align: left;
+	background-color: #12a686;
+	/*margin-top: 34px;*/
+	border:1px solid #00957C;
+}
+.content_banner font{
+	font-size:14px;
+	color:white;
+	font-family:黑体;
+	height: 25px;
+	line-height:25px ;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+
+/*搜索框*/
+.search{
+	width: 100%;
+	height: 56px;
+	border:1px #a9d7cd solid;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.search div{
+	font-family: 宋体;
+	font-size: 12px;
+	color: black;
+	display: inline;
+	float: left;
+	/*margin-right: 10px;*/
+	/*padding-top: 20px;*/
+}
+.search input{
+	width:100px;
+	height: 20px;
+	border-radius: 2px;
+	border:1px solid #89d6c4;
+}
+
+a:link{
+	text-decoration: none;
+	font-size:14px;
+	font-family:黑体;
+	color:black;
+}
+a:hover{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+a:visited{
+	text-decoration: underline;
+	font-size:14px;
+	color:black;
+	font-family:黑体;
+}
+.content table{
+	width: 100%;
+	border-collapse: collapse;
+	height: auto;
+	table-layout: fixed;*//*2015.5.11新增固定table宽度
+	/*margin-top:10px;*//*2015.5.11去掉上间距*/
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+	/*border:1px #a9d7cd solid;*/
+	overflow-y:scroll;
+}
+.content table tr td{
+	text-align: left;
+	/*width:100px;*/
+	height: 40px;
+}
+.content a{
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+}
+#specialDiv{
+	float: right;
+	display: inline;
+	margin-right: 24px;
+	margin-top:15px;
+}
+#specialDiv img{
+	vertical-align: middle;
+}
+.content_table{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	font-family: 宋体;
+	color:#484949;
+	font-size: 12px;
+	border:1px #A9D7CD solid;
+	/*border:1px #a9d7cd solid;*/
+	overflow-y:scroll;
+	
+}
+/*设置页码*/
+.yema{
+	width: 300px;
+	text-align: right;
+	float: right;
+	margin-right: 24px;
+	word-spacing: 2px;
+	/*border:1px red solid;*/
+}
+.yema input{
+	width: 51px;
+	height: 22px;
+	color:white;
+	font-family: 宋体;
+	font-size: 12px;
+}
+.button{
+	float: right;
+	display: inline;
+	margin-top: -26px;
+	margin-right: -2px;
+}
+/*banner栏的按钮*/
+.button input{
+	width: 48px;
+	height: 21px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color:#12a686;
+	margin-right: 6px;
+	background-color: white;
+	border-radius: 2px;
+	border:0px;
+}
+/*设置表格滚动*/
+.all_tables{
+	width:99%;
+	height: 90%;
+	overflow: auto;
+	/*float:left;*/
+	position: absolute;
+	margin-left:10px;
+	margin-top: 10px;
+	/*border:1px solid #A9D7CD;*/
+	
+
+	/*border:1px red solid;*/
+}
+.content_leftMenu{
+	/*float: left;*/
+	width: 100px;
+	height: 90%;
+	margin-right: 10px;
+	overflow-y:auto;
+	position: fixed;
+	font-family: 宋体;
+	font-size: 12px;
+	color:#484949;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	border:1px #A9D7CD solid;
+}
+#selectTable{
+	width: 100%;
+	height: auto;
+	border:0;
+
+}
+#selectTable tr{
+	/*width: 100%;*/
+	height: 41px;
+
+	border:0;
+}
+#selectTable tr td{
+	width: 10px;
+	height: 41px;
+	text-align: center;
+}
+#immuneContent{
+	width:100%;
+	height:auto;
+
+	border:1px solid #A9D7CD;
+	background-color: white;
+	font-family: 宋体;
+	font-size: 12px;
+	color:#484949;
+
+	/*margin-left: 10px;*/
+	
+}
+#immuneContent tr td{
+	text-align:center;
+	border:none;
+	/*border:1px solid #aaaaaa;*/
+	height: 41px;
+	width:30px;
+}

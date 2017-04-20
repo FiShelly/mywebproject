@@ -1,0 +1,22 @@
+{
+  "data":[
+    {
+      "divClass":"rt-tool plus",
+      "iClass":"icon-plus",
+      "text":" 添加到Sprite ",
+      "click":"add"
+    },
+    {
+      "divClass":"rt-tool save",
+      "iClass":"entypo-icon-picture",
+      "text":" 保存Sprite ",
+      "click":"save"
+    },
+    {
+      "divClass":"rt-tool save",
+      "iClass":"icon-picture",
+      "text":" 保存单张 ",
+      "click":"download"
+    }
+  ]
+}

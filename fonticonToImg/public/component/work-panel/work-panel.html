@@ -1,0 +1,204 @@
+<div class="ic-work-panel">
+    <div class="ic-work-panel-switch">
+        <div class="ic-work-panel-switch-btn a"></div>
+        <div class="ic-work-panel-switch-er a" ng-click="changeSetting('a');">设置</div>
+        <div class="ic-work-panel-switch-er b" ng-click="changeSetting('b');">状态</div>
+    </div>
+    <div class="ic-work-panel-of a">
+        <div class="ic-work-panel-of-content-frame">
+            <div class="ic-work-panel-of-content-body" style="transform: translateY(0px);">
+                <div class="ic-work-panel-title">图标</div>
+                <div class="ic-work-panel-input">
+                    <p>图标宽度</p>
+                    <input type="text" value="" ng-model="config.icon.width">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>图标高度</p>
+                    <input type="text" value="" ng-model="config.icon.height">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>状态层数</p>
+                    <input type="text" value="" ng-model="config.icon.layer_count">
+                </div>
+                <div class="ic-work-panel-check">
+                    <p>绘制参考线</p>
+                    <i ng-click="clickStatus('icon','show_line')"
+                       ng-class="{true: 'icon-check-sign', false: 'icon-check-empty'}[config.icon.show_line]"></i>
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>参考线颜色</p>
+                    <input type="text" value="" ng-model="config.icon.line_color" ng-blur="selectColor($event)">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>文件名前缀</p>
+                    <input type="text" value="" ng-model="config.icon.filename_prefix">
+                </div>
+                <div class="ic-work-panel-select">
+                    <p>文件类型</p>
+                    <select ng-model="config.icon.file_type">
+                        <option value="jpg">jpg</option>
+                        <option value="png">png</option>
+                    </select>
+                </div>
+                <div class="ic-work-panel-select">
+                    <p>新状态初始参数</p>
+                    <select ng-model="config.icon.layer_new">
+                        <option value="global">按全局配置</option>
+                        <option value="old">按最近状态</option>
+                    </select>
+                </div>
+                <div class="ic-work-panel-title">状态全局设置</div>
+                <div class="ic-work-panel-input">
+                    <p>图标X坐标</p>
+                    <input type="text" value="" ng-model="config.global.icon_x">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>图标Y坐标</p>
+                    <input type="text" value="" ng-model="config.global.icon_y">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>图标尺寸</p>
+                    <input type="text" value="" ng-model="config.global.icon_size">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>图标颜色</p>
+                    <input type="text" value="" ng-model="config.global.icon_color" ng-blur="selectColor($event)">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>背景颜色</p>
+                    <input type="text" value="" ng-model="config.global.icon_backgroundcolor" ng-blur="selectColor($event)">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>阴影模糊级数</p>
+                    <input type="text" value="" ng-model="config.global.icon_shadowblur">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>阴影偏移X</p>
+                    <input type="text" value="" ng-model="config.global.icon_shadowoffsetx">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>阴影偏移Y</p>
+                    <input type="text" value="" ng-model="config.global.icon_shadowoffsety">
+                </div>
+                <div class="ic-work-panel-input">
+                    <p>阴影颜色</p>
+                    <input type="text" value="" ng-model="config.global.icon_shadowcolor" ng-blur="selectColor($event)">
+                </div>
+                <div class="ic-work-panel-select">
+                    <p>图标对齐方式</p>
+                    <select ng-model="config.global.icon_text_align">
+                        <option value="center">center</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                    </select>
+                </div>
+                <div class="ic-work-panel-select">
+                    <p>图标基线方式</p>
+                    <select ng-model="config.global.icon_base_line">
+                        <option value="middle">middle</option>
+                        <option value="top">top</option>
+                        <option value="bottom">bottom</option>
+                        <option value="alphabetic">alphabetic</option>
+                        <option value="ideographic">ideographic</option>
+                        <option value="hanging">hanging</option>
+                    </select>
+                </div>
+                <div class="ic-work-panel-title">搜索</div>
+                <div class="ic-work-panel-check">
+                    <p>高亮关键字</p>
+                    <i ng-click="clickStatus('search','search_highlight')"
+                       ng-class="{true: 'icon-check-sign', false: 'icon-check-empty'}[config.search.search_highlight]"></i>
+                </div>
+                <div class="ic-work-panel-check">
+                    <p>实时搜索</p>
+                    <i ng-click="clickStatus('search','search_realtime')"
+                       ng-class="{true: 'icon-check-sign', false: 'icon-check-empty'}[config.search.search_realtime]"></i>
+                </div>
+            </div>
+        </div>
+        <div class="ic-work-panel-of-scroll-thumb">
+            <div class="ic-work-panel-of-scroll-bar" style="height: 271.446px; transform: translateY(0px);"></div>
+        </div>
+    </div>
+    <div class="ic-work-panel-of b hide">
+        <div class="ic-work-panel-of-content-frame">
+            <div class="ic-work-panel-of-content-body" style="transform: translateY(0px);">
+
+                <div ng-repeat="data in iconStatus track by $index">
+                    <div class="ic-work-panel-title">状态设置 - {{$index+1}}</div>
+                    <div class="ic-work-panel-input">
+                        <p>图标X坐标</p>
+                        <input type="text" value="" ng-model="data.icon_x">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>图标Y坐标</p>
+                        <input type="text" value="" ng-model="data.icon_y">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>图标尺寸</p>
+                        <input type="text" value="" ng-model="data.icon_size">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>图标颜色</p>
+                        <input type="text" value="" ng-model="data.icon_color" ng-blur="selectColor($event,$index)">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>背景颜色</p>
+                        <input type="text" value="" ng-model="data.icon_backgroundcolor" ng-blur="selectColor($event,$index)">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>阴影模糊级数</p>
+                        <input type="text" value="" ng-model="data.icon_shadowblur">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>阴影颜色</p>
+                        <input type="text" value="" ng-model="data.icon_shadowcolor" ng-blur="selectColor($event,$index)">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>阴影偏移X</p>
+                        <input type="text" value="" ng-model="data.icon_shadowoffsetx">
+                    </div>
+                    <div class="ic-work-panel-input">
+                        <p>阴影偏移Y</p>
+                        <input type="text" value="" ng-model="data.icon_shadowoffsety">
+                    </div>
+                    <div class="ic-work-panel-select">
+                        <p>图标对齐方式</p>
+                        <select ng-model="data.icon_text_align">
+                            <option value="center">center</option>
+                            <option value="start">start</option>
+                            <option value="end">end</option>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                        </select>
+                    </div>
+                    <div class="ic-work-panel-select">
+                        <p>图标基线方式</p>
+                        <select ng-model="data.icon_base_line">
+                            <option value="middle">middle</option>
+                            <option value="top">top</option>
+                            <option value="bottom">bottom</option>
+                            <option value="alphabetic">alphabetic</option>
+                            <option value="ideographic">ideographic</option>
+                            <option value="hanging">hanging</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ic-work-panel-of-scroll-thumb">
+            <div class="ic-work-panel-of-scroll-bar" style="transform: translateY(0px);"></div>
+        </div>
+    </div>
+</div>
+<div class="ic-color-win">
+    <p style="position: absolute;margin: 0;top: 5px;padding-left: 25px;">当前颜色：<span id="display-color"></span></p>
+    <canvas class="ic-color-panel" width="240" height="180"></canvas>
+    <canvas class="ic-color-direction" width="16" height="180"></canvas>
+    <canvas class="ic-color-alpha" width="16" height="180"></canvas>
+    <div class="ic-color-adj-p"></div>
+    <div class="ic-color-adj-d" style="top: 26px;"></div>
+    <div class="ic-color-adj-a" style="top: 26px;"></div>
+</div>

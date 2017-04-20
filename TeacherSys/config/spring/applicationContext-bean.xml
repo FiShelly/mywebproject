@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean name="LoginoutAction" class="com.teacherwork.action.LoginoutAction" scope="prototype"></bean>
+	<bean name="AdminAction" class="com.teacherwork.action.AdminAction" scope="prototype"></bean>
+	<bean name="UserAction" class="com.teacherwork.action.UserAction" scope="prototype"></bean>
+	<bean name="TitleAction" class="com.teacherwork.action.TitleAction" scope="prototype"></bean>
+	<bean name="PostAction" class="com.teacherwork.action.PostAction" scope="prototype"></bean>
+	<bean name="TypeAction" class="com.teacherwork.action.TypeAction" scope="prototype"></bean>
+	<bean name="BaseCoeAction" class="com.teacherwork.action.BaseCoeAction" scope="prototype"></bean>
+	<bean name="SpecCoeAction" class="com.teacherwork.action.SpecCoeAction" scope="prototype"></bean>
+	<bean name="ClassInAction" class="com.teacherwork.action.ClassInAction" scope="prototype"></bean>
+	<bean name="WorkAction" class="com.teacherwork.action.WorkAction" scope="prototype"></bean>
+	<bean name="DataCountAction" class="com.teacherwork.action.DataCountAction" scope="prototype"></bean>
+	<bean name="CoefficientAction" class="com.teacherwork.action.CoefficientAction" scope="prototype"></bean>
+	<bean name="MessageAction" class="com.teacherwork.action.MessageAction" scope="prototype"></bean>
+	<bean name="downloadAction" class="com.teacherwork.action.DownloadAction" scope="prototype"></bean>
+
+	<bean id="adminDao" class="com.teacherwork.dao.impl.AdminDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="adminService" class="com.teacherwork.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao" />
+		<property name="dao" ref="adminDao" />
+	</bean>
+
+	<bean id="bcDao" class="com.teacherwork.dao.impl.BaseCoeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="bcService" class="com.teacherwork.service.impl.BaseCoeServiceImpl">
+		<property name="dao" ref="bcDao" />
+	</bean>
+
+	<bean id="cDao" class="com.teacherwork.dao.impl.ClassInDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="cService" class="com.teacherwork.service.impl.ClassInService">
+		<property name="dao" ref="cDao" />
+	</bean>
+
+	<bean id="dcDao" class="com.teacherwork.dao.impl.DataCountDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="dcService" class="com.teacherwork.service.impl.DataCountServiceImpl">
+		<property name="dcDao" ref="dcDao" />
+		<property name="dao" ref="dcDao" />
+	</bean>
+
+	<bean id="pDao" class="com.teacherwork.dao.impl.PostDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="pService" class="com.teacherwork.service.impl.PostServiceImpl">
+		<property name="dao" ref="pDao" />
+	</bean>
+
+	<bean id="prDao" class="com.teacherwork.dao.impl.PreReviewDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="prService" class="com.teacherwork.service.impl.PreReviewServiceImpl">
+		<property name="prDao" ref="prDao" />
+		<property name="dao" ref="prDao" />
+	</bean>
+
+	<bean id="spDao" class="com.teacherwork.dao.impl.SpecCoeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="spService" class="com.teacherwork.service.impl.SpecCoeServiceImpl">
+		<property name="dao" ref="spDao" />
+	</bean>
+
+	<bean id="titleDao" class="com.teacherwork.dao.impl.TitleDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="titleService" class="com.teacherwork.service.impl.TitleServiceImpl">
+		<property name="dao" ref="titleDao" />
+	</bean>
+
+	<bean id="typeDao" class="com.teacherwork.dao.impl.TypeDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="typeService" class="com.teacherwork.service.impl.TypeServiceImpl">
+		<property name="dao" ref="typeDao" />
+	</bean>
+
+	
+	
+	<bean id="uDao" class="com.teacherwork.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="uService" class="com.teacherwork.service.impl.UserServiceImpl">
+		<property name="dao" ref="uDao" />
+		<property name="uDao" ref="uDao" />
+	</bean>
+	
+	<bean id="wDao" class="com.teacherwork.dao.impl.WorkDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="wService" class="com.teacherwork.service.impl.WorkServiceImpl">
+		<property name="dao" ref="wDao" />
+		<property name="wDao" ref="wDao" />
+	</bean>
+	
+	<bean id="ymDao" class="com.teacherwork.dao.impl.YearMsgDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ymService" class="com.teacherwork.service.impl.YearMsgServiceImpl">
+		<property name="dao" ref="ymDao" />
+		<property name="msgDao" ref="ymDao"></property>
+	</bean>
+	
+	<bean id="msgDao" class="com.teacherwork.dao.impl.MessageDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="msgService" class="com.teacherwork.service.impl.MessageServiceImpl">
+		<property name="dao" ref="msgDao" />
+		<property name="msgDao" ref="msgDao"></property>
+	</bean>
+	
+</beans>

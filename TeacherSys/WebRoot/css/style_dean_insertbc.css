@@ -1,0 +1,137 @@
+/*body大小*/
+.iframeDisplayWh{
+    width: 350px !important;
+    height: 350px;
+    min-width: 350px;
+    overflow: hidden;
+}
+/*内容大小*/
+.newAddBcWh{
+    width: 350px;
+    height: 350px;
+}
+/*三个按钮样式*/
+.btn_add_base_con_same{
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+}
+.alerm_text {
+    color: red;
+}
+/*对话框内容样式*/
+.add_base_dia{
+    border-top: solid 1px black;
+    margin-top: 10px;
+    width: 350px;
+    text-align: center;
+}
+.add_base_dia input{
+    width: 50px;
+}
+.add_base_dia span{
+    line-height: 35px;
+    display: inline-block;
+    float: left;
+}
+.add_base_dia span:nth-child(1){
+    width: 20% !important;
+}
+.add_base_dia span:nth-child(2){
+    width:43% !important;
+}
+.add_base_dia span:nth-child(3){
+    width: 17% !important;
+}
+.add_base_dia span:nth-child(4){
+    width: 20% !important;
+}
+/*表格行样式*/
+.base_coef_table_row{
+    height: 35px;
+    border-bottom: solid 1px black;
+    border-left:  solid 1px black;
+    border-right:  solid 1px black;
+}
+/*表格标题样式*/
+.base_coef_table_title{
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+}
+/*按钮样式*/
+.same {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+}
+.add {
+    background-color: #0079f5;
+}
+
+.delete {
+    background-color: red;
+}
+/*除基础系数外和额内外系数的系数表格*/
+.add_other_dia{
+    border-top: solid 1px black;
+    margin-top: 10px;
+    width: 350px;
+    text-align: center;
+}
+.add_other_dia input[type=text]{
+    width: 90%;
+}
+.add_other_dia input[type=number]{
+    width: 60%;
+}
+.add_other_dia span{
+    line-height: 35px;
+    display: inline-block;
+    float: left;
+}
+.add_other_dia span:nth-child(1){
+    width: 50% !important;
+}
+.add_other_dia span:nth-child(2){
+    width:25% !important;
+}
+.add_other_dia span:nth-child(3){
+    width: 25% !important;
+}
+/*额内外系数表格样式*/
+.add_limit_dia{
+    border-top: solid 1px black;
+    margin-top: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.add_limit_dia span{
+    width: 33%;
+}
+
+.add_limit_dia input[type=number]{
+    width:80%;
+}
+.public_coef_table{
+    margin-top: 10px;
+    border-top: solid 1px black;
+    float: left;
+    height: 98%;
+}
+.public_coef_table span{
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+    float: left;
+}
+
+
+

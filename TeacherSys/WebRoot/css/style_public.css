@@ -1,0 +1,396 @@
+* {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    min-width: 810px;
+    overflow-y: hidden;
+}
+/*弹性布局*/
+#main {
+    display: flex;
+}
+/*左侧菜单栏宽高*/
+#leftMenu {
+    /*position: relative;*/
+    height: 100%;
+    width: 220px;
+    background-color: #00aaff;
+}
+/*校徽栏样式*/
+.headIcon {
+    width: 220px;
+    height: 200px;
+    text-align: center;
+
+}
+/*校徽图片样式*/
+.headIcon img {
+    width: 150px;
+    height: 150px;
+}
+/*校徽下方字体样式*/
+.headIcon label {
+    font-size: 22px;
+    display: inline-block;
+    font-family: STXinwei;
+    font-weight: 500;
+}
+/*左侧菜单栏高度*/
+.menuList {
+    height: 400px;
+}
+/*左侧菜单栏集体样式*/
+li {
+    display: inline-block;
+    width: 220px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+li ul li{
+    display: inline-block;
+    width: 220px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+li ul li span{
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+li span {
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+/*菜单栏题目左右侧图标*/
+.iconLiLeft {
+    width: 30px;
+    margin-left: 20px;
+    padding-right: 10px;
+    border-right-color: #0055ff;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+.iconLiRight {
+    float: right;
+    width: 25px;
+    height: 0px;
+}
+/*头部菜单栏样式*/
+#content_head {
+    background-color: rgb(237, 237, 239);
+    height: 75px;
+    position: relative;
+    display: inline-block;
+}
+/*头部菜单图标样式*/
+.menuIcon {
+    line-height: 75px;
+    height: 75px;
+    width: 140px;
+    margin-left: 20px;
+}
+.menuIcon i {
+    font-size: 28px;
+    cursor: pointer;
+}
+/*信息图标样式*/
+.messageStyle {
+    position: absolute;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    top: 28%;
+    margin-left: -10px;
+}
+/*头部菜单栏左右侧图标*/
+.head_item_left {
+    float: left;
+    width: 100px;
+}
+.head_item_right {
+    margin-top: 12px;
+    display: inline-block;
+    float: right;
+    width: 200px;
+    height: 75px;
+}
+.head_item_right img {
+    width: 50px;
+    height: 50px;
+}
+.headViewIcon {
+    float: left;
+    width: 50px;
+    height: 75px;
+}
+.headText {
+    width: auto;
+    line-height: 25px;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+.head_item_setting {
+    float: right;
+    margin-right: 18px;
+    width: 50px;
+    height: 75px;
+}
+.head_item_setting a {
+    width: 28px;
+    display: inline-block;
+}
+/*用户设置栏目样式*/
+#user_setting {
+    overflow: hidden;
+    width: 100px;
+    height: 125px;
+    position: absolute;
+    right: 183px;
+    display: none;
+    top: 50px;
+}
+.user_setting_item {
+    background-color: rgb(139, 139, 152);
+    margin-top: 5px;
+    width: 100px;
+    height: auto;
+    text-align: left;
+    display: block;
+}
+.user_arrow {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: rgb(139, 139, 152) transparent;
+    top: -5px;
+    right: 45px;
+}
+.user_item {
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    height: auto;
+}
+.user_item a {
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+}
+.user_item a:hover {
+    background-color: #0055ff;
+}
+
+.msg_more_item{
+    text-align: center;
+    display: table-cell;
+    width: 123px;
+}
+.msg_more_item:nth-child(2){
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.msg_more_item:hover,#remind_more:hover {
+    background-color: #0055ff;
+}
+/*表头样式*/
+table {
+    border-collapse: collapse;
+    width: 350px;
+    height: 255px;
+    font-size: 18px;
+}
+td {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border: solid #000;
+    border-width: 1px;
+}
+td:nth-last-child(2) {
+    text-align: right;
+    width: 40%;
+}
+td:nth-last-child(1) {
+    text-align: left;
+}
+.tab_title {
+    text-align: center !important;
+}
+/*普通弹框样式*/
+.pop_dialog {
+    width: 400px;
+    display: none;
+    height: 350px;
+    z-index: 1;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -175px;
+    top: 50%;
+    left: 50%;
+    background-color: plum;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*课酬管理对话框*/
+.pop_sal_dialog {
+    width: 400px;
+    display: none;
+    height: 500px;
+    z-index: 1;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -250px;
+    top: 50%;
+    left: 50%;
+    background-color: plum;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*消息提醒对话框*/
+.pop_msg_dialog {
+    width: 460px;
+    display: none;
+    height: 500px;
+    z-index: 1;
+    position: absolute;
+    margin-left: -230px;
+    margin-top: -250px;
+    top: 50%;
+    left: 50%;
+    background-color: plum;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+/*控制iframe*/
+.pop_dialog iframe{
+    width: 400px;
+    display: none;
+    height: 100%;
+    margin-left: 20px;
+}
+.pop_dialog a {
+    margin-top: 10px;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    background-color: #0055ff;
+}
+
+.pop_sal_dialog a {
+    margin-top: 10px;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
+/*用户个人信息表格*/
+.tab_space {
+    width: 350px;
+    height: 255px;
+    margin: auto;
+}
+/*填充空间*/
+.space {
+    width: 400px;
+    height: 30px;
+}
+/*背景阴影*/
+#shadow {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    background-color: rgba(87, 87, 98, 0.5);
+}
+
+
+
+input {
+    width: 150px;
+    height: 25px;
+}
+h2 {
+    height: 50px;
+}
+
+
+/*密码修改弹框宽度更改*/
+.newWh {
+    height: 250px !important;
+}
+
+.btn_style {
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.submit {
+    background-color: #005599;
+}
+.cancel {
+    background-color: red;
+
+}
+/*内容部分宽度*/
+#content_main {
+    width: 98%;
+    margin: 0px auto;
+}
+iframe {
+    display: none;
+    height: 85%;
+    border-style: none;
+}
+/*左侧菜单栏子菜单样式*/
+.childMenu li {
+    margin-left: 30px;
+}
+/*修改申请对话框的文本框样式*/
+#update_reason{
+	width: 300px;
+	height: 90px;
+	resize:none;
+	padding:5px;
+	font-size:16px;
+	margin-bottom: 10px;
+}
+#update_apply>label{
+	display:inline-block;
+	width: 300px;
+	height: 30px;
+	line-height:30px;
+	text-align:left;
+	font-size:16px;
+}
+#update_apply_dia h2{
+	line-height: 50px;
+}

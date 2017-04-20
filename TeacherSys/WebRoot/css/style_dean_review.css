@@ -1,0 +1,145 @@
+/*审核页面宽高样式*/
+.review_table {
+    display: block !important;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+/*div行样式*/
+.rowRe {
+    height: 30px ;
+    width: 100%;
+    border-top: solid 1px black;
+    font-size: 0.9em;
+}
+.rowRe div{
+    float: left;
+    line-height: 30px;
+}
+.add {
+    background-color: #0079f5;
+}
+.ajbtn{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    box-shadow: 1px 0px 8px gray;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block !important;
+    line-height: 24px !important;
+}
+/*分页按钮组*/
+.page_row {
+    line-height: 30px;
+    height: 30px ;
+    width: 100%;
+    border-top: solid 1px black;
+    font-size: 0.9em;
+}
+.page_btn_group_re{
+    float: right;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+    background-color: #0079f5;
+}
+
+.page_btn_group_exp{
+    float: right;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: #0079f5;
+}
+
+.pageSelect_re {
+    display: inline-block;
+    line-height: 30px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+    width: 40px;
+}
+.pageDisplay_re{
+    width: 100px;
+    float: right;
+}
+@media screen and (max-width: 1000px) {
+    .fixReWidth{
+        width: 860px;
+    }
+
+    .review_row_1{
+        width: 90px;
+    }
+    .review_row_2{
+        width: 150px;
+    }
+    .review_row_3{
+        width:270px;
+    }
+    .review_row_4{
+        width: 75px;
+    }
+    .review_row_5{
+        width: 120px;
+    }
+    .review_row_6{
+        width: 75px;
+        height: 30px !important;
+    }
+    .review_row_7{
+        width: 75px;
+        height: 30px !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .fixReWidth{
+        width: 80%;
+    }
+
+    .review_row_1{
+        width: 10%;
+    }
+    .review_row_2{
+        width: 15%;
+    }
+    .review_row_3{
+        width:30%;
+    }
+    .review_row_4{
+        width: 10%;
+    }
+    .review_row_5{
+        width: 15%;
+    }
+    .review_row_6{
+        width: 10%;
+        height: 30px !important;
+    }
+    .review_row_7{
+        width: 10%;
+        height: 30px !important;
+    }
+}

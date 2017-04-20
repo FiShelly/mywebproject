@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'fontelico';
+  src: url('../font/fontelico.eot?7803838');
+  src: url('../font/fontelico.eot?7803838#iefix') format('embedded-opentype'),
+       url('../font/fontelico.woff?7803838') format('woff'),
+       url('../font/fontelico.ttf?7803838') format('truetype'),
+       url('../font/fontelico.svg?7803838#fontfontelico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontfontelico';
+    src: url('../font/fontfontelico.svg?7803838#fontfontelico') format('svg');
+  }
+}
+*/
+ 
+ [class^="fontelico-icon-"], [class*=" fontelico-icon-"] {
+  font-family: fontelico;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+ 
+.fontelico-icon-emo-happy:before { content: '\e800'; } /* '' */
+.fontelico-icon-emo-wink:before { content: '\e801'; } /* '' */
+.fontelico-icon-emo-wink2:before { content: '\e813'; } /* '' */
+.fontelico-icon-emo-unhappy:before { content: '\e802'; } /* '' */
+.fontelico-icon-emo-sleep:before { content: '\e803'; } /* '' */
+.fontelico-icon-emo-thumbsup:before { content: '\e804'; } /* '' */
+.fontelico-icon-emo-devil:before { content: '\e805'; } /* '' */
+.fontelico-icon-emo-surprised:before { content: '\e806'; } /* '' */
+.fontelico-icon-emo-tongue:before { content: '\e807'; } /* '' */
+.fontelico-icon-emo-coffee:before { content: '\e808'; } /* '' */
+.fontelico-icon-emo-sunglasses:before { content: '\e809'; } /* '' */
+.fontelico-icon-emo-displeased:before { content: '\e80a'; } /* '' */
+.fontelico-icon-emo-beer:before { content: '\e80b'; } /* '' */
+.fontelico-icon-emo-grin:before { content: '\e80c'; } /* '' */
+.fontelico-icon-emo-angry:before { content: '\e80d'; } /* '' */
+.fontelico-icon-emo-saint:before { content: '\e80e'; } /* '' */
+.fontelico-icon-emo-cry:before { content: '\e80f'; } /* '' */
+.fontelico-icon-emo-shoot:before { content: '\e810'; } /* '' */
+.fontelico-icon-emo-squint:before { content: '\e811'; } /* '' */
+.fontelico-icon-emo-laugh:before { content: '\e812'; } /* '' */
+.fontelico-icon-spin1:before { content: '\e830'; } /* '' */
+.fontelico-icon-spin2:before { content: '\e831'; } /* '' */
+.fontelico-icon-spin3:before { content: '\e832'; } /* '' */
+.fontelico-icon-spin4:before { content: '\e834'; } /* '' */
+.fontelico-icon-spin5:before { content: '\e838'; } /* '' */
+.fontelico-icon-spin6:before { content: '\e839'; } /* '' */
+.fontelico-icon-firefox:before { content: '\e840'; } /* '' */
+.fontelico-icon-chrome:before { content: '\e841'; } /* '' */
+.fontelico-icon-opera:before { content: '\e842'; } /* '' */
+.fontelico-icon-ie:before { content: '\e843'; } /* '' */
+.fontelico-icon-crown:before { content: '\e844'; } /* '' */
+.fontelico-icon-crown-plus:before { content: '\e845'; } /* '' */
+.fontelico-icon-crown-minus:before { content: '\e846'; } /* '' */
+.fontelico-icon-marquee:before { content: '\e847'; } /* '' */
